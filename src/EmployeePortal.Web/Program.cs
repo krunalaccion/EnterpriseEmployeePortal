@@ -16,6 +16,8 @@ builder.Services.AddHttpClient<IPortalApiClient, PortalApiClient>(client =>
 });
 
 var app = builder.Build();
+app.UseHsts();
+app.UseHttpsRedirection();
 
 if (!app.Environment.IsDevelopment())
 {

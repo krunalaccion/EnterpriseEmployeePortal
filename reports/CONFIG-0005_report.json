@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "CONFIG-0005",
+    "rule_id": "aspnet.config.connectionstring-plaintext-password",
+    "severity": "HIGH",
+    "file_path": "src/EmployeePortal.API/appsettings.json",
+    "line_number": 1,
+    "message": "Plaintext password detected in ConnectionStrings['DefaultConnection'].",
+    "code_snippet": "\"DefaultConnection\": \"Server=sql-sandbox.dummy-hr-portal.local,1433;Database=EnterpriseEmployeePortalDb;User Id=sa_portal_dummy;Password=***REDACTED***;TrustServerCertificate=True;\"",
+    "repository": "git_agent_workspace_wtrzs78s",
+    "status": "FIXED",
+    "cwe_id": "CWE-798"
+  },
+  "target_file": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_wtrzs78s/src/EmployeePortal.API/appsettings.json",
+  "applied": true,
+  "provider": "ollama:qwen2.5-coder:3b",
+  "explanation": "Finding 'CONFIG-0005' (aspnet.config.connectionstring-plaintext-password) is verified as already remediated in 'src/EmployeePortal.API/appsettings.json'.",
+  "remediation_summary": "Already remediated in src/EmployeePortal.API/appsettings.json.",
+  "diff": "",
+  "backup_path": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_wtrzs78s/src/EmployeePortal.API/appsettings.json.bak",
+  "error": null,
+  "timestamp": "2026-11-07T13:38:59.102086+00:00"
+}
