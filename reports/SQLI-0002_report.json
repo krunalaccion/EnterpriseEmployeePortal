@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "SQLI-0002",
+    "rule_id": "csharp-sql-injection",
+    "severity": "HIGH",
+    "file_path": "src/EmployeePortal.Data/Repositories/ReportRepository.cs",
+    "line_number": 6,
+    "message": "Unparameterized SQL string interpolation/concatenation with 'whereSegment' at line 48 passed to FromSqlRaw at line 50.",
+    "code_snippet": "var sql = $\"SELECT * FROM Employees WHERE {whereSegment}\"",
+    "repository": "git_agent_workspace_3rephuzs",
+    "status": "FIXED",
+    "cwe_id": "CWE-89"
+  },
+  "target_file": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_3rephuzs/src/EmployeePortal.Data/Repositories/ReportRepository.cs",
+  "applied": true,
+  "provider": "ollama:qwen2.5-coder:3b",
+  "explanation": "Finding 'SQLI-0002' (csharp-sql-injection) is verified as already remediated in 'src/EmployeePortal.Data/Repositories/ReportRepository.cs'.",
+  "remediation_summary": "Already remediated in src/EmployeePortal.Data/Repositories/ReportRepository.cs.",
+  "diff": "",
+  "backup_path": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_3rephuzs/src/EmployeePortal.Data/Repositories/ReportRepository.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-07T15:16:57.580962+00:00"
+}

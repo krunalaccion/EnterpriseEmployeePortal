@@ -39,6 +39,8 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+app.UseHsts();
+app.UseHttpsRedirection();
 
 using (var scope = app.Services.CreateScope())
 {
