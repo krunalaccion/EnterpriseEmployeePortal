@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "SEMGREP-009",
+    "rule_id": "airgap.network.unwhitelisted-external-egress",
+    "severity": "HIGH",
+    "file_path": "src/EmployeePortal.Models/Configuration/IntegrationSettings.cs",
+    "line_number": 12,
+    "message": "Direct outbound internet connection detected in isolated perimeter. Must route through internal proxy. (CWE-918)",
+    "code_snippet": "public string PayrollBankGatewayUrl { get; set; } = \"https://payroll-sandbox.dummy-hr-portal.local/api/v1/ach\";",
+    "repository": "git_agent_workspace_3gamn60z",
+    "status": "FIXED",
+    "cwe_id": "C"
+  },
+  "target_file": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_3gamn60z/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs",
+  "applied": true,
+  "provider": "ollama:qwen2.5-coder:3b",
+  "explanation": "Detected unwhitelisted outbound network call in `src/EmployeePortal.Models/Configuration/IntegrationSettings.cs` violating air-gap zero-egress perimeter policy (CWE-918). Rerouted outbound traffic through internal proxy gateway 'http://proxy.airgap.internal:8080'.",
+  "remediation_summary": "Rerouted outbound request to internal airgap proxy gateway 'http://proxy.airgap.internal:8080'.",
+  "diff": "--- a/git_agent_workspace_3gamn60z/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs\n+++ b/git_agent_workspace_3gamn60z/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs\n@@ -9,6 +9,6 @@\n     public int SmtpPort { get; set; } = 587;\n     public string SmtpUsername { get; set; } = \"hr-notifications@dummy-hr-portal.local\";\n     public string SmtpPassword { get; set; } = string.Empty;\n-    public string PayrollBankGatewayUrl { get; set; } = \"https://payroll-sandbox.dummy-hr-portal.local/api/v1/ach\";\n+    public string PayrollBankGatewayUrl { get; set; } = \"http://proxy.airgap.internal:8080/api/v1/ach\";\n }\n ",
+  "backup_path": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_3gamn60z/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-07T14:51:33.988097+00:00"
+}
