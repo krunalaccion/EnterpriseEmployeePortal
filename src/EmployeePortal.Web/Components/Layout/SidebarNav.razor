@@ -1,0 +1,50 @@
+@inject PortalUserSessionService SessionService
+@implements IDisposable
+
+<aside class="portal-sidebar">
+    <div class="sidebar-brand">
+        Enterprise HR Portal
+    </div>
+
+    <div class="nav-section-label">Executive &amp; Core HR</div>
+    <NavLink class="nav-item-link" href="" Match="NavLinkMatch.All">Dashboard</NavLink>
+    <NavLink class="nav-item-link" href="employees">Employee Directory</NavLink>
+    <NavLink class="nav-item-link" href="departments">Departments</NavLink>
+
+    <div class="nav-section-label">Workforce Operations</div>
+    <NavLink class="nav-item-link" href="attendance">Attendance &amp; Shifts</NavLink>
+    <NavLink class="nav-item-link" href="leave">Leave Management</NavLink>
+    <NavLink class="nav-item-link" href="documents">Document Vault</NavLink>
+    <NavLink class="nav-item-link" href="notifications">Notifications</NavLink>
+
+    @if (SessionService.IsInRole("Admin", "HRManager", "PayrollSpecialist"))
+    {
+        <div class="nav-section-label">Finance &amp; Analytics</div>
+        <NavLink class="nav-item-link" href="payroll">Payroll Center</NavLink>
+        <NavLink class="nav-item-link" href="reports">Reports &amp; Analytics</NavLink>
+    }
+
+    @if (SessionService.IsInRole("Admin", "HRManager"))
+    {
+        <div class="nav-section-label">Governance &amp; Security</div>
+        <NavLink class="nav-item-link" href="users-roles">Users &amp; Roles</NavLink>
+        <NavLink class="nav-item-link" href="audit-logs">Audit Logs</NavLink>
+        <NavLink class="nav-item-link" href="administration">System Administration</NavLink>
+    }
+
+    <div class="nav-section-label">Authentication</div>
+    <NavLink class="nav-item-link" href="login">Sign In / Token</NavLink>
+</aside>
+
+@code {
+    protected override void OnInitialized()
+    {
+        SessionService.OnSessionChanged += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        SessionService.OnSessionChanged -= StateHasChanged;
+    }
+}
+

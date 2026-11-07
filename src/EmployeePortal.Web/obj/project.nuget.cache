@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "1PqY4hiaK6E=",
+  "success": true,
+  "projectFilePath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Web\\EmployeePortal.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\VinayKumar\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\VinayKumar\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\VinayKumar\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1904",
+      "level": "Warning",
+      "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
+      "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Web\\EmployeePortal.Web.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Web\\EmployeePortal.Web.csproj",
+      "libraryId": "System.Drawing.Common",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
+}

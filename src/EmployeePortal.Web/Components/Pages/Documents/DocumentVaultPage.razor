@@ -1,0 +1,81 @@
+@page "/documents"
+@inject IPortalApiClient ApiClient
+
+<PageTitle>Document Vault | EnterpriseEmployeePortal</PageTitle>
+
+<h1 style="margin-top:0;">Employee Document Vault</h1>
+
+<div class="surface-card" style="margin-bottom: 1.5rem;">
+    <h3 style="margin-top:0;">Upload HR Document</h3>
+    <div class="form-row">
+        <input type="number" class="form-control" placeholder="Employee ID" @bind="_uploadDto.EmployeeId" />
+        <input class="form-control" placeholder="Document Title" @bind="_uploadDto.Title" />
+        <input class="form-control" placeholder="File Name (e.g. review_2026.pdf)" @bind="_uploadDto.FileName" />
+        <button class="btn btn-primary" @onclick="UploadAsync">Upload Document</button>
+    </div>
+</div>
+
+<div class="surface-card">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Employee</th>
+                <th>Category</th>
+                <th>File Name</th>
+                <th>Size (Bytes)</th>
+                <th>Confidential</th>
+                <th>Uploaded By</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var doc in _documents)
+            {
+                <tr>
+                    <td>#@doc.Id</td>
+                    <td><strong>@doc.Title</strong></td>
+                    <td>@doc.EmployeeName</td>
+                    <td>@doc.Category</td>
+                    <td><code>@doc.FileName</code></td>
+                    <td>@doc.FileSizeBytes</td>
+                    <td><span class="badge">@(doc.IsConfidential ? "Confidential" : "Standard")</span></td>
+                    <td>@doc.UploadedByUsername</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private IReadOnlyList<EmployeeDocumentDto> _documents = Array.Empty<EmployeeDocumentDto>();
+    private UploadDocumentRequestDto _uploadDto = new()
+    {
+        EmployeeId = 1,
+        Title = "Annual Security & Compliance Attestation",
+        FileName = "security_attestation_2026.txt",
+        Category = DocumentCategory.Certification,
+        IsConfidential = true
+    };
+
+    protected override async Task OnInitializedAsync() => await LoadAsync();
+
+    private async Task LoadAsync()
+    {
+        try
+        {
+            _documents = await ApiClient.GetDocumentsAsync();
+        }
+        catch
+        {
+            _documents = Array.Empty<EmployeeDocumentDto>();
+        }
+    }
+
+    private async Task UploadAsync()
+    {
+        await ApiClient.UploadDocumentAsync(_uploadDto);
+        await LoadAsync();
+    }
+}
+

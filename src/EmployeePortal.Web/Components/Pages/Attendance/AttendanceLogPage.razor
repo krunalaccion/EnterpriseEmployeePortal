@@ -1,0 +1,72 @@
+@page "/attendance"
+@inject IPortalApiClient ApiClient
+
+<PageTitle>Attendance | EnterpriseEmployeePortal</PageTitle>
+
+<h1 style="margin-top:0;">Time &amp; Attendance Log</h1>
+
+<div class="surface-card" style="margin-bottom: 1.5rem;">
+    <h3 style="margin-top:0;">Record Shift Clock-In / Clock-Out</h3>
+    <div class="form-row">
+        <input type="number" class="form-control" placeholder="Employee ID" @bind="_clockRequest.EmployeeId" />
+        <input type="number" class="form-control" placeholder="Overtime Hours" @bind="_clockRequest.OvertimeHours" />
+        <input class="form-control" placeholder="Shift Notes" @bind="_clockRequest.ShiftNotes" />
+        <button class="btn btn-primary" @onclick="RecordShiftAsync">Log Shift</button>
+    </div>
+</div>
+
+<div class="surface-card">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Work Date</th>
+                <th>Employee</th>
+                <th>Regular Hours</th>
+                <th>Overtime</th>
+                <th>Status</th>
+                <th>Terminal IP</th>
+                <th>Shift Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var a in _attendance)
+            {
+                <tr>
+                    <td>@a.WorkDate.ToString("yyyy-MM-dd")</td>
+                    <td><strong>@a.EmployeeName</strong></td>
+                    <td>@a.RegularHours</td>
+                    <td>@a.OvertimeHours</td>
+                    <td><span class="badge">@a.AttendanceStatus</span></td>
+                    <td><code>@a.SourceIpAddress</code></td>
+                    <td>@a.ShiftNotes</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private IReadOnlyList<AttendanceRecordDto> _attendance = Array.Empty<AttendanceRecordDto>();
+    private ClockInOutRequestDto _clockRequest = new() { EmployeeId = 1, OvertimeHours = 1m, ShiftNotes = "Completed release deployment" };
+
+    protected override async Task OnInitializedAsync() => await LoadAsync();
+
+    private async Task LoadAsync()
+    {
+        try
+        {
+            _attendance = await ApiClient.GetAttendanceRecordsAsync();
+        }
+        catch
+        {
+            _attendance = Array.Empty<AttendanceRecordDto>();
+        }
+    }
+
+    private async Task RecordShiftAsync()
+    {
+        await ApiClient.RecordShiftAsync(_clockRequest);
+        await LoadAsync();
+    }
+}
+

@@ -1,0 +1,31 @@
+<div class="surface-card">
+    <h3 style="margin-top: 0; font-size: 1.02rem;">@Title</h3>
+    @if (DataPoints == null || DataPoints.Count == 0)
+    {
+        <p style="color: #64748b;">No chart data available.</p>
+    }
+    else
+    {
+        var maxVal = Math.Max(DataPoints.Max(d => d.Value), 1m);
+        @foreach (var point in DataPoints)
+        {
+            var widthPct = Math.Clamp((int)Math.Round((point.Value / maxVal) * 100m), 4, 100);
+            <div class="bar-row">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.25rem;">
+                    <span><strong>@point.Label</strong> <small style="color:#64748b;">(@point.Category)</small></span>
+                    <span>@(FormatAsCurrency ? point.Value.ToString("C0") : point.Value.ToString("N0"))</span>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width: @(widthPct)%;"></div>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; } = string.Empty;
+    [Parameter] public IReadOnlyList<ChartDataPointDto> DataPoints { get; set; } = Array.Empty<ChartDataPointDto>();
+    [Parameter] public bool FormatAsCurrency { get; set; }
+}
+

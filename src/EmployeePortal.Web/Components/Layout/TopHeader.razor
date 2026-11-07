@@ -1,0 +1,44 @@
+@inject PortalUserSessionService SessionService
+@implements IDisposable
+
+<header class="portal-header">
+    <div>
+        <strong>EnterpriseEmployeePortal</strong>
+        <span class="badge" style="margin-left: 0.75rem;">.NET 9 Security Benchmark Target</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+        <span>Active User: <strong>@SessionService.CurrentUsername</strong> (@SessionService.CurrentRole)</span>
+        <select class="form-control" style="width: auto;" @onchange="OnRoleSwitch">
+            <option value="Admin" selected="@(SessionService.CurrentRole == "Admin")">View as: Admin (elena.vance)</option>
+            <option value="HRManager" selected="@(SessionService.CurrentRole == "HRManager")">View as: HRManager (marcus.sterling)</option>
+            <option value="PayrollSpecialist" selected="@(SessionService.CurrentRole == "PayrollSpecialist")">View as: PayrollSpecialist (david.kowalski)</option>
+            <option value="Employee" selected="@(SessionService.CurrentRole == "Employee")">View as: Employee (sophia.alvarez)</option>
+        </select>
+    </div>
+</header>
+
+@code {
+    protected override void OnInitialized()
+    {
+        SessionService.OnSessionChanged += StateHasChanged;
+    }
+
+    private void OnRoleSwitch(ChangeEventArgs e)
+    {
+        var role = e.Value?.ToString() ?? "Admin";
+        var (user, empId) = role switch
+        {
+            "HRManager" => ("hr.marcus", 2),
+            "PayrollSpecialist" => ("payroll.david", 4),
+            "Employee" => ("sophia.dev", 5),
+            _ => ("admin", 1)
+        };
+        SessionService.SwitchActiveRoleForTesting(role, user, empId);
+    }
+
+    public void Dispose()
+    {
+        SessionService.OnSessionChanged -= StateHasChanged;
+    }
+}
+

@@ -1,0 +1,48 @@
+<div class="surface-card" style="margin-bottom: 1.25rem; display: flex; gap: 0.85rem; align-items: center; flex-wrap: wrap;">
+    <input class="form-control" style="max-width: 300px;" placeholder="@Placeholder"
+           value="@SearchTerm" @oninput="OnSearchInput" />
+
+    @if (Departments != null && Departments.Count > 0)
+    {
+        <select class="form-control" style="max-width: 220px;" @onchange="OnDepartmentChanged">
+            <option value="">All Departments</option>
+            @foreach (var d in Departments)
+            {
+                <option value="@d.Id">@d.Name (@d.Code)</option>
+            }
+        </select>
+    }
+
+    <button class="btn btn-primary" @onclick="() => OnApplyFilter.InvokeAsync()">Apply Filter</button>
+    <button class="btn btn-secondary" @onclick="ResetAsync">Reset</button>
+</div>
+
+@code {
+    [Parameter] public string Placeholder { get; set; } = "Search records...";
+    [Parameter] public string? SearchTerm { get; set; }
+    [Parameter] public EventCallback<string?> SearchTermChanged { get; set; }
+    [Parameter] public IReadOnlyList<DepartmentDto>? Departments { get; set; }
+    [Parameter] public EventCallback<int?> SelectedDepartmentChanged { get; set; }
+    [Parameter] public EventCallback OnApplyFilter { get; set; }
+
+    private async Task OnSearchInput(ChangeEventArgs e)
+    {
+        SearchTerm = e.Value?.ToString();
+        await SearchTermChanged.InvokeAsync(SearchTerm);
+    }
+
+    private async Task OnDepartmentChanged(ChangeEventArgs e)
+    {
+        int? deptId = int.TryParse(e.Value?.ToString(), out var parsed) ? parsed : null;
+        await SelectedDepartmentChanged.InvokeAsync(deptId);
+    }
+
+    private async Task ResetAsync()
+    {
+        SearchTerm = string.Empty;
+        await SearchTermChanged.InvokeAsync(SearchTerm);
+        await SelectedDepartmentChanged.InvokeAsync(null);
+        await OnApplyFilter.InvokeAsync();
+    }
+}
+

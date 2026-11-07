@@ -1,0 +1,77 @@
+@page "/"
+@inject IPortalApiClient ApiClient
+
+<PageTitle>Executive Dashboard | EnterpriseEmployeePortal</PageTitle>
+
+<h1 style="margin-top: 0;">Executive HR &amp; Workforce Dashboard</h1>
+
+@if (_loading)
+{
+    <div class="surface-card">Loading workforce metrics from REST API...</div>
+}
+else
+{
+    <div class="card-grid">
+        <StatSummaryCard Title="Total Workforce" Value="@_summary.TotalEmployees.ToString()" Subtitle="@($"{_summary.ActiveEmployees} Active Full-Time")" />
+        <StatSummaryCard Title="Departments" Value="@_summary.TotalDepartments.ToString()" Subtitle="Active business units" />
+        <StatSummaryCard Title="Cycle Net Payroll" Value="@_summary.MonthlyPayrollTotal.ToString("C0")" Subtitle="Processed direct deposit" />
+        <StatSummaryCard Title="Pending Leave" Value="@_summary.PendingLeaveRequests.ToString()" Subtitle="Awaiting manager review" />
+        <StatSummaryCard Title="Security Alerts" Value="@_summary.OpenSecurityAlerts.ToString()" Subtitle="Recent audit events" />
+    </div>
+
+    <div class="form-row">
+        <CssBarChart Title="Headcount by Department" DataPoints="_summary.HeadcountByDepartment" />
+        <CssBarChart Title="Estimated Monthly Compensation by Department" DataPoints="_summary.PayrollByDepartment" FormatAsCurrency="true" />
+    </div>
+
+    <div class="surface-card" style="margin-top: 1.5rem;">
+        <h3 style="margin-top: 0;">Recent Governance &amp; Security Audit Activity</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Timestamp (UTC)</th>
+                    <th>Actor</th>
+                    <th>Module</th>
+                    <th>Action</th>
+                    <th>Severity</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var log in _summary.RecentAuditEvents)
+                {
+                    <tr>
+                        <td>@log.TimestampUtc.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>@log.ActorUsername</td>
+                        <td>@log.ModuleName</td>
+                        <td>@log.ActionName</td>
+                        <td><span class="badge">@log.Severity</span></td>
+                        <td><code>@log.DetailsJson</code></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private DashboardSummaryDto _summary = new();
+    private bool _loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _summary = await ApiClient.GetDashboardSummaryAsync();
+        }
+        catch
+        {
+            _summary = new DashboardSummaryDto();
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+}
+

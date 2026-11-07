@@ -1,0 +1,71 @@
+@page "/reports"
+@inject IPortalApiClient ApiClient
+
+<PageTitle>Reports &amp; Analytics | EnterpriseEmployeePortal</PageTitle>
+
+<h1 style="margin-top:0;">Workforce Reports &amp; Dynamic Query Builder</h1>
+
+<div class="surface-card" style="margin-bottom: 1.5rem;">
+    <h3 style="margin-top:0;">Dynamic LINQ Report Query</h3>
+    <div class="form-row">
+        <input class="form-control" placeholder="Dynamic Where (e.g. BaseSalary > 120000)" @bind="_query.DynamicWhereClause" />
+        <input class="form-control" placeholder="Order By (e.g. BaseSalary descending)" @bind="_query.OrderByExpression" />
+        <button class="btn btn-primary" @onclick="ExecuteReportAsync">Run Report</button>
+    </div>
+</div>
+
+@if (_reportResult != null)
+{
+    <div class="card-grid">
+        <StatSummaryCard Title="Matched Employees" Value="@_reportResult.MatchedRowCount.ToString()" />
+        <StatSummaryCard Title="Total Compensation" Value="@_reportResult.TotalCompensation.ToString("C0")" />
+        <StatSummaryCard Title="Average Salary" Value="@_reportResult.AverageCompensation.ToString("C0")" />
+    </div>
+
+    <div class="surface-card">
+        <h3 style="margin-top:0;">@_reportResult.ReportTitle</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Emp #</th>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>Department</th>
+                    <th>Base Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var e in _reportResult.MatchedEmployees)
+                {
+                    <tr>
+                        <td>@e.EmployeeNumber</td>
+                        <td>@e.FullName</td>
+                        <td>@e.JobTitle</td>
+                        <td>@e.DepartmentName</td>
+                        <td>@e.BaseSalary.ToString("C0")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private DynamicReportQueryDto _query = new() { DynamicWhereClause = "BaseSalary >= 100000", OrderByExpression = "BaseSalary descending" };
+    private WorkforceAnalyticsReportDto? _reportResult;
+
+    protected override async Task OnInitializedAsync() => await ExecuteReportAsync();
+
+    private async Task ExecuteReportAsync()
+    {
+        try
+        {
+            _reportResult = await ApiClient.RunDynamicReportAsync(_query);
+        }
+        catch
+        {
+            _reportResult = new WorkforceAnalyticsReportDto();
+        }
+    }
+}
+

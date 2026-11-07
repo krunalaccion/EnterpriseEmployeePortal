@@ -1,0 +1,7 @@
+{
+  "EmployeePortal.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.API",
+  "EmployeePortal.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Business",
+  "EmployeePortal.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Data",
+  "EmployeePortal.Integrations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Integrations",
+  "EmployeePortal.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models"
+}

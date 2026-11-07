@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>EmployeePortal.Models</RootNamespace>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- [SECURITY-TEST-SCENARIO] SCA Benchmark Vulnerable Dependency (Isolated in Models to avoid transitive conflict with Microsoft.Data.SqlClient 5.1.2's System.Windows.Extensions 6.0.0 dependency) -->
+    <!-- CVE-2021-24112 / GHSA-rxg9-xrhp-64gj (Affected: 4.0.0-4.7.1, Fixed: 4.7.2 / 5.0.3; Linux/macOS runtime condition) -->
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+  </ItemGroup>
+</Project>

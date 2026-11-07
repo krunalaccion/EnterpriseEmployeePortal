@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>EmployeePortal.Business</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeePortal.Models\EmployeePortal.Models.csproj" />
+    <ProjectReference Include="..\EmployeePortal.Integrations\EmployeePortal.Integrations.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- [SECURITY-TEST-SCENARIO] SCA Benchmark Vulnerable Dependencies -->
+    <!-- CVE-2024-21319 / GHSA-59j7-ghrg-fj52 (Affected 6.x: < 6.34.0, Fixed: 6.34.0) -->
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.33.0" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.33.0" />
+    <!-- CVE-2026-32933 / GHSA-rvv3-g6hj-g44x (Affected: < 15.1.1, Fixed for .NET 9: 15.1.1) -->
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+</Project>
+

@@ -1,0 +1,95 @@
+@page "/leave"
+@inject IPortalApiClient ApiClient
+
+<PageTitle>Leave Management | EnterpriseEmployeePortal</PageTitle>
+
+<h1 style="margin-top:0;">Employee Leave &amp; Time-Off Requests</h1>
+
+<div class="surface-card" style="margin-bottom: 1.5rem;">
+    <h3 style="margin-top:0;">Submit Time-Off Request</h3>
+    <div class="form-row">
+        <input type="number" class="form-control" placeholder="Employee ID" @bind="_submitModel.EmployeeId" />
+        <select class="form-control" @bind="_submitModel.LeaveType">
+            @foreach (var lt in Enum.GetValues<LeaveType>())
+            {
+                <option value="@lt">@lt</option>
+            }
+        </select>
+        <input class="form-control" placeholder="Reason" @bind="_submitModel.Reason" />
+        <button class="btn btn-primary" @onclick="SubmitLeaveAsync">Submit Request</button>
+    </div>
+</div>
+
+<div class="surface-card">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Employee</th>
+                <th>Type</th>
+                <th>Dates</th>
+                <th>Days</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var req in _requests)
+            {
+                <tr>
+                    <td>#@req.Id</td>
+                    <td><strong>@req.EmployeeName</strong><br /><small>@req.DepartmentName</small></td>
+                    <td>@req.LeaveType</td>
+                    <td>@req.StartDate.ToString("yyyy-MM-dd") to @req.EndDate.ToString("yyyy-MM-dd")</td>
+                    <td>@req.TotalDays</td>
+                    <td>@req.Reason</td>
+                    <td><span class="badge">@req.Status</span></td>
+                    <td>
+                        @if (req.Status == LeaveApprovalStatus.Pending)
+                        {
+                            <button class="btn btn-primary" @onclick="() => ApproveAsync(req.Id)">Approve</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private IReadOnlyList<LeaveRequestDto> _requests = Array.Empty<LeaveRequestDto>();
+    private SubmitLeaveRequestDto _submitModel = new() { EmployeeId = 1, Reason = "Scheduled PTO" };
+
+    protected override async Task OnInitializedAsync() => await LoadAsync();
+
+    private async Task LoadAsync()
+    {
+        try
+        {
+            _requests = await ApiClient.GetLeaveRequestsAsync();
+        }
+        catch
+        {
+            _requests = Array.Empty<LeaveRequestDto>();
+        }
+    }
+
+    private async Task SubmitLeaveAsync()
+    {
+        await ApiClient.SubmitLeaveRequestAsync(_submitModel);
+        await LoadAsync();
+    }
+
+    private async Task ApproveAsync(int requestId)
+    {
+        await ApiClient.ReviewLeaveRequestAsync(new ReviewLeaveRequestDto
+        {
+            LeaveRequestId = requestId,
+            NewStatus = LeaveApprovalStatus.Approved,
+            ReviewerComments = "Approved via HR Portal"
+        });
+        await LoadAsync();
+    }
+}
+

@@ -1,0 +1,145 @@
+@page "/employees"
+@inject IPortalApiClient ApiClient
+@inject NavigationManager Nav
+
+<PageTitle>Employee Directory | EnterpriseEmployeePortal</PageTitle>
+
+<div style="display:flex; justify-content:space-between; align-items:center;">
+    <h1 style="margin-top:0;">Employee Directory</h1>
+    <button class="btn btn-primary" @onclick="() => _showCreateForm = !_showCreateForm">
+        @(_showCreateForm ? "Close Form" : "+ New Employee")
+    </button>
+</div>
+
+<SearchAndFilterBar Placeholder="Search name, email, title, ID..."
+                    @bind-SearchTerm="_query.SearchTerm"
+                    Departments="_departments"
+                    SelectedDepartmentChanged="OnDepartmentChanged"
+                    OnApplyFilter="LoadEmployeesAsync" />
+
+@if (_showCreateForm)
+{
+    <div class="surface-card" style="margin-bottom: 1.5rem;">
+        <h3 style="margin-top:0;">Onboard New Employee</h3>
+        <EditForm Model="_newEmployee" OnValidSubmit="CreateEmployeeAsync">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="form-row">
+                <div>
+                    <label>Employee Number</label>
+                    <InputText class="form-control" @bind-Value="_newEmployee.EmployeeNumber" />
+                </div>
+                <div>
+                    <label>First Name</label>
+                    <InputText class="form-control" @bind-Value="_newEmployee.FirstName" />
+                </div>
+                <div>
+                    <label>Last Name</label>
+                    <InputText class="form-control" @bind-Value="_newEmployee.LastName" />
+                </div>
+                <div>
+                    <label>Email</label>
+                    <InputText class="form-control" @bind-Value="_newEmployee.Email" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label>Job Title</label>
+                    <InputText class="form-control" @bind-Value="_newEmployee.JobTitle" />
+                </div>
+                <div>
+                    <label>Department ID</label>
+                    <InputNumber class="form-control" @bind-Value="_newEmployee.DepartmentId" />
+                </div>
+                <div>
+                    <label>Base Salary ($)</label>
+                    <InputNumber class="form-control" @bind-Value="_newEmployee.BaseSalary" />
+                </div>
+                <div>
+                    <label>HR Notes (HTML)</label>
+                    <InputText class="form-control" @bind-Value="_newEmployee.HrNotesHtml" />
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Employee</button>
+        </EditForm>
+    </div>
+}
+
+<div class="surface-card">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Emp #</th>
+                <th>Full Name</th>
+                <th>Job Title</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Base Salary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var emp in _pagedResult.Items)
+            {
+                <tr>
+                    <td><strong>@emp.EmployeeNumber</strong></td>
+                    <td>@emp.FullName<br /><small style="color:#64748b;">@emp.Email</small></td>
+                    <td>@emp.JobTitle</td>
+                    <td>@emp.DepartmentName</td>
+                    <td><span class="badge">@emp.Status</span></td>
+                    <td>@emp.BaseSalary.ToString("C0")</td>
+                    <td>
+                        <button class="btn btn-secondary" @onclick="@(() => Nav.NavigateTo($"/employees/{emp.Id}"))">Profile</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <PaginationControl CurrentPage="_pagedResult.PageNumber"
+                       TotalPages="_pagedResult.TotalPages"
+                       TotalCount="_pagedResult.TotalCount"
+                       OnPageChanged="OnPageChangedAsync" />
+</div>
+
+@code {
+    private SearchQueryDto _query = new() { PageNumber = 1, PageSize = 10 };
+    private PagedResultDto<EmployeeDto> _pagedResult = new();
+    private IReadOnlyList<DepartmentDto> _departments = Array.Empty<DepartmentDto>();
+    private UpsertEmployeeDto _newEmployee = new() { EmployeeNumber = "EMP-1099", DepartmentId = 1, BaseSalary = 115000m };
+    private bool _showCreateForm;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _departments = await ApiClient.GetDepartmentsAsync();
+            await LoadEmployeesAsync();
+        }
+        catch
+        {
+            _pagedResult = new PagedResultDto<EmployeeDto>();
+        }
+    }
+
+    private async Task LoadEmployeesAsync()
+    {
+        _pagedResult = await ApiClient.SearchEmployeesAsync(_query);
+    }
+
+    private void OnDepartmentChanged(int? deptId) => _query.DepartmentId = deptId;
+
+    private async Task OnPageChangedAsync(int newPage)
+    {
+        _query.PageNumber = newPage;
+        await LoadEmployeesAsync();
+    }
+
+    private async Task CreateEmployeeAsync()
+    {
+        await ApiClient.CreateEmployeeAsync(_newEmployee);
+        _showCreateForm = false;
+        await LoadEmployeesAsync();
+    }
+}
+

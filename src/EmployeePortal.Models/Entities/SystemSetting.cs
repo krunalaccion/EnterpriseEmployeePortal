@@ -1,0 +1,11 @@
+namespace EmployeePortal.Models.Entities;
+
+public class SystemSetting : BaseEntity
+{
+    public string SettingKey { get; set; } = string.Empty;
+    public string SettingValue { get; set; } = string.Empty;
+    public string GroupName { get; set; } = "General";
+    public string Description { get; set; } = string.Empty;
+    public bool IsSensitive { get; set; }
+}
+

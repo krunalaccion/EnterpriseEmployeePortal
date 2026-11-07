@@ -1,0 +1,15 @@
+<div class="surface-card">
+    <div class="kpi-title">@Title</div>
+    <div class="kpi-value">@Value</div>
+    @if (!string.IsNullOrWhiteSpace(Subtitle))
+    {
+        <div style="font-size: 0.82rem; color: #64748b;">@Subtitle</div>
+    }
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; } = string.Empty;
+    [Parameter] public string Value { get; set; } = string.Empty;
+    [Parameter] public string? Subtitle { get; set; }
+}
+

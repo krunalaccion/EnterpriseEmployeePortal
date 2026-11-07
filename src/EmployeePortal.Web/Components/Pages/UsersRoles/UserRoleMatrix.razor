@@ -1,0 +1,96 @@
+@page "/users-roles"
+@inject IPortalApiClient ApiClient
+
+<PageTitle>Users &amp; Roles | EnterpriseEmployeePortal</PageTitle>
+
+<h1 style="margin-top:0;">User Accounts &amp; Role Access Matrix</h1>
+
+<div class="surface-card" style="margin-bottom: 1.5rem;">
+    <h3 style="margin-top:0;">Grant Role Assignment</h3>
+    <div class="form-row">
+        <input type="number" class="form-control" placeholder="User ID" @bind="_assignDto.UserId" />
+        <input class="form-control" placeholder="Role Name (Admin, HRManager, PayrollSpecialist)" @bind="_assignDto.RoleName" />
+        <button class="btn btn-primary" @onclick="AssignRoleAsync">Assign Role</button>
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="surface-card">
+        <h3 style="margin-top:0;">Portal User Accounts</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Linked Employee</th>
+                    <th>Hash Mode</th>
+                    <th>Assigned Roles</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var u in _users)
+                {
+                    <tr>
+                        <td>@u.Id</td>
+                        <td><strong>@u.Username</strong><br /><small>@u.Email</small></td>
+                        <td>@(u.EmployeeFullName ?? "System")</td>
+                        <td><code>@u.PasswordHashAlgorithm</code></td>
+                        <td>@string.Join(", ", u.Roles)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="surface-card">
+        <h3 style="margin-top:0;">Defined Security Roles</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Permissions</th>
+                    <th>Users</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var r in _roles)
+                {
+                    <tr>
+                        <td><strong>@r.Name</strong></td>
+                        <td><code>@r.PermissionsCsv</code></td>
+                        <td>@r.AssignedUserCount</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    private IReadOnlyList<UserAccountDto> _users = Array.Empty<UserAccountDto>();
+    private IReadOnlyList<RoleDto> _roles = Array.Empty<RoleDto>();
+    private AssignUserRoleDto _assignDto = new() { UserId = 4, RoleName = "HRManager" };
+
+    protected override async Task OnInitializedAsync() => await LoadAsync();
+
+    private async Task LoadAsync()
+    {
+        try
+        {
+            _users = await ApiClient.GetUsersAsync();
+            _roles = await ApiClient.GetRolesAsync();
+        }
+        catch
+        {
+            _users = Array.Empty<UserAccountDto>();
+            _roles = Array.Empty<RoleDto>();
+        }
+    }
+
+    private async Task AssignRoleAsync()
+    {
+        await ApiClient.AssignRoleAsync(_assignDto);
+        await LoadAsync();
+    }
+}
+

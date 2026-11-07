@@ -1,0 +1,20 @@
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+    <span style="font-size: 0.85rem; color: #475569;">
+        Page <strong>@CurrentPage</strong> of <strong>@Math.Max(TotalPages, 1)</strong> (Total: @TotalCount records)
+    </span>
+    <div style="display: flex; gap: 0.5rem;">
+        <button class="btn btn-secondary" disabled="@(CurrentPage <= 1)" @onclick="PrevAsync">Previous</button>
+        <button class="btn btn-secondary" disabled="@(CurrentPage >= TotalPages)" @onclick="NextAsync">Next</button>
+    </div>
+</div>
+
+@code {
+    [Parameter] public int CurrentPage { get; set; } = 1;
+    [Parameter] public int TotalPages { get; set; } = 1;
+    [Parameter] public int TotalCount { get; set; }
+    [Parameter] public EventCallback<int> OnPageChanged { get; set; }
+
+    private Task PrevAsync() => CurrentPage > 1 ? OnPageChanged.InvokeAsync(CurrentPage - 1) : Task.CompletedTask;
+    private Task NextAsync() => CurrentPage < TotalPages ? OnPageChanged.InvokeAsync(CurrentPage + 1) : Task.CompletedTask;
+}
+

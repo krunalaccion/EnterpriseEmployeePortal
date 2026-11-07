@@ -1,0 +1,60 @@
+@page "/employees/{EmployeeId:int}"
+@inject IPortalApiClient ApiClient
+@inject NavigationManager Nav
+
+<PageTitle>Employee Profile | EnterpriseEmployeePortal</PageTitle>
+
+<div style="margin-bottom: 1rem;">
+    <button class="btn btn-secondary" @onclick="@(() => Nav.NavigateTo("/employees"))">&larr; Back to Directory</button>
+</div>
+
+@if (_employee == null)
+{
+    <div class="surface-card">Employee record not found or loading...</div>
+}
+else
+{
+    <div class="surface-card">
+        <h1 style="margin-top:0;">@_employee.FullName (@_employee.EmployeeNumber)</h1>
+        <p style="color:#475569;">@_employee.JobTitle &bull; @_employee.DepartmentName &bull; Status: <span class="badge">@_employee.Status</span></p>
+
+        <div class="form-row" style="margin-top: 1.5rem;">
+            <div><strong>Email:</strong> @_employee.Email</div>
+            <div><strong>Phone:</strong> @_employee.Phone</div>
+            <div><strong>Hire Date:</strong> @_employee.HireDate.ToString("yyyy-MM-dd")</div>
+            <div><strong>Annual Base Salary:</strong> @_employee.BaseSalary.ToString("C2")</div>
+            <div><strong>Encrypted Tax ID (DES):</strong> <code>@_employee.EncryptedTaxId</code></div>
+            <div><strong>Routing / Account:</strong> <code>@_employee.BankRoutingNumber / @_employee.BankAccountNumber</code></div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 1.5rem 0;" />
+
+        <h3>HR Performance &amp; Background Notes</h3>
+        @* =========================================================================
+           [SECURITY-TEST-SCENARIO] ID: VULN-XSS-01 | CWE-79: Cross-Site Scripting (Stored XSS)
+           WARNING: INTENTIONALLY VULNERABLE MARKUP RENDERING FOR SECURESCANAI BENCHMARKING ONLY.
+           Renders raw HrNotesHtml directly as unencoded MarkupString.
+           ========================================================================= *@
+        <div class="surface-card" style="background: #f8fafc;">
+            @((MarkupString)_employee.HrNotesHtml)
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public int EmployeeId { get; set; }
+    private EmployeeDto? _employee;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        try
+        {
+            _employee = await ApiClient.GetEmployeeByIdAsync(EmployeeId);
+        }
+        catch
+        {
+            _employee = null;
+        }
+    }
+}
+

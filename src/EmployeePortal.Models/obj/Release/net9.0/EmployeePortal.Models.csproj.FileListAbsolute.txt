@@ -1,0 +1,13 @@
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\bin\Release\net9.0\EmployeePortal.Models.deps.json
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\bin\Release\net9.0\EmployeePortal.Models.dll
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\bin\Release\net9.0\EmployeePortal.Models.pdb
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\obj\Release\net9.0\EmployeePortal.Models.csproj.AssemblyReference.cache
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\obj\Release\net9.0\EmployeePortal.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\obj\Release\net9.0\EmployeePortal.Models.AssemblyInfoInputs.cache
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\obj\Release\net9.0\EmployeePortal.Models.AssemblyInfo.cs
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\obj\Release\net9.0\EmployeePortal.Models.csproj.CoreCompileInputs.cache
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\obj\Release\net9.0\EmployeePortal.Models.sourcelink.json
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\obj\Release\net9.0\EmployeePortal.Models.dll
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\obj\Release\net9.0\refint\EmployeePortal.Models.dll
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\obj\Release\net9.0\EmployeePortal.Models.pdb
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Models\obj\Release\net9.0\ref\EmployeePortal.Models.dll

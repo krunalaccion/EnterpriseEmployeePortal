@@ -1,0 +1,69 @@
+@page "/notifications"
+@inject IPortalApiClient ApiClient
+
+<PageTitle>Notifications | EnterpriseEmployeePortal</PageTitle>
+
+<h1 style="margin-top:0;">Enterprise Broadcast &amp; Notification Center</h1>
+
+<div class="surface-card" style="margin-bottom: 1.5rem;">
+    <h3 style="margin-top:0;">Publish Workforce Announcement (HTML)</h3>
+    <div class="form-row">
+        <input class="form-control" placeholder="Announcement Title" @bind="_newNotification.Title" />
+        <input class="form-control" placeholder="HTML Body" @bind="_newNotification.MessageHtml" />
+        <button class="btn btn-primary" @onclick="PublishAsync">Publish Broadcast</button>
+    </div>
+</div>
+
+<div class="surface-card">
+    @foreach (var n in _notifications)
+    {
+        <div style="padding: 1rem; border-bottom: 1px solid #e2e8f0;">
+            <div style="display:flex; justify-content:space-between;">
+                <strong>@n.Title</strong>
+                <span class="badge">@n.Category</span>
+            </div>
+            @* =========================================================================
+               [SECURITY-TEST-SCENARIO] ID: VULN-XSS-02 | CWE-79: Stored Cross-Site Scripting in Broadcast Banner
+               WARNING: INTENTIONALLY VULNERABLE MARKUP RENDERING FOR SECURESCANAI BENCHMARKING ONLY.
+               ========================================================================= *@
+            <div style="margin-top: 0.5rem;">
+                @((MarkupString)n.MessageHtml)
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private IReadOnlyList<NotificationDto> _notifications = Array.Empty<NotificationDto>();
+    private CreateNotificationDto _newNotification = new()
+    {
+        Title = "System Maintenance Window",
+        MessageHtml = "<b>Notice:</b> Scheduled maintenance this Sunday at 02:00 UTC.",
+        Category = "IT Operations",
+        IsBroadcast = true
+    };
+
+    protected override async Task OnInitializedAsync() => await LoadAsync();
+
+    private async Task LoadAsync()
+    {
+        try
+        {
+            _notifications = await ApiClient.GetNotificationsAsync();
+        }
+        catch
+        {
+            _notifications = Array.Empty<NotificationDto>();
+        }
+    }
+
+    private async Task PublishAsync()
+    {
+        if (!string.IsNullOrWhiteSpace(_newNotification.Title))
+        {
+            await ApiClient.CreateNotificationAsync(_newNotification);
+            await LoadAsync();
+        }
+    }
+}
+

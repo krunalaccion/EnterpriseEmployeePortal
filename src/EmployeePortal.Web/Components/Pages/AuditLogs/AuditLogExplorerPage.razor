@@ -1,0 +1,63 @@
+@page "/audit-logs"
+@inject IPortalApiClient ApiClient
+
+<PageTitle>Audit Logs | EnterpriseEmployeePortal</PageTitle>
+
+<h1 style="margin-top:0;">Security &amp; Governance Audit Explorer</h1>
+
+<div class="surface-card" style="margin-bottom: 1.25rem; display:flex; gap:1rem;">
+    <input class="form-control" style="max-width:260px;" placeholder="Filter by Module (e.g. Payroll)" @bind="_moduleFilter" />
+    <button class="btn btn-primary" @onclick="LoadLogsAsync">Filter Logs</button>
+</div>
+
+<div class="surface-card">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>UTC Timestamp</th>
+                <th>Actor</th>
+                <th>Module</th>
+                <th>Action</th>
+                <th>Target</th>
+                <th>Severity</th>
+                <th>Payload</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in _logs)
+            {
+                <tr>
+                    <td>#@item.Id</td>
+                    <td>@item.TimestampUtc.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    <td><strong>@item.ActorUsername</strong></td>
+                    <td>@item.ModuleName</td>
+                    <td>@item.ActionName</td>
+                    <td>@item.TargetEntityId</td>
+                    <td><span class="badge">@item.Severity</span></td>
+                    <td><code>@item.DetailsJson</code></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private IReadOnlyList<AuditLogDto> _logs = Array.Empty<AuditLogDto>();
+    private string? _moduleFilter;
+
+    protected override async Task OnInitializedAsync() => await LoadLogsAsync();
+
+    private async Task LoadLogsAsync()
+    {
+        try
+        {
+            _logs = await ApiClient.GetAuditLogsAsync(50, _moduleFilter);
+        }
+        catch
+        {
+            _logs = Array.Empty<AuditLogDto>();
+        }
+    }
+}
+

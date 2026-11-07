@@ -1,0 +1,77 @@
+@page "/departments"
+@inject IPortalApiClient ApiClient
+
+<PageTitle>Departments | EnterpriseEmployeePortal</PageTitle>
+
+<h1 style="margin-top:0;">Department &amp; Cost Center Management</h1>
+
+<div class="surface-card" style="margin-bottom: 1.5rem;">
+    <h3 style="margin-top:0;">Create Business Unit</h3>
+    <div class="form-row">
+        <input class="form-control" placeholder="Department Name" @bind="_newDepartment.Name" />
+        <input class="form-control" placeholder="Code (e.g. ENG-AI)" @bind="_newDepartment.Code" />
+        <input class="form-control" placeholder="Cost Center" @bind="_newDepartment.CostCenter" />
+        <input class="form-control" placeholder="Location" @bind="_newDepartment.Location" />
+        <button class="btn btn-primary" @onclick="CreateAsync">Add Department</button>
+    </div>
+</div>
+
+<div class="surface-card">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Department Name</th>
+                <th>Cost Center</th>
+                <th>Location</th>
+                <th>Annual Budget</th>
+                <th>Headcount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var d in _departments)
+            {
+                <tr>
+                    <td><strong>@d.Code</strong></td>
+                    <td>@d.Name</td>
+                    <td>@d.CostCenter</td>
+                    <td>@d.Location</td>
+                    <td>@d.AnnualBudget.ToString("C0")</td>
+                    <td>@d.EmployeeCount</td>
+                    <td><span class="badge">@(d.IsActive ? "Active" : "Inactive")</span></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private IReadOnlyList<DepartmentDto> _departments = Array.Empty<DepartmentDto>();
+    private UpsertDepartmentDto _newDepartment = new() { AnnualBudget = 950000m, IsActive = true };
+
+    protected override async Task OnInitializedAsync() => await LoadAsync();
+
+    private async Task LoadAsync()
+    {
+        try
+        {
+            _departments = await ApiClient.GetDepartmentsAsync();
+        }
+        catch
+        {
+            _departments = Array.Empty<DepartmentDto>();
+        }
+    }
+
+    private async Task CreateAsync()
+    {
+        if (!string.IsNullOrWhiteSpace(_newDepartment.Name) && !string.IsNullOrWhiteSpace(_newDepartment.Code))
+        {
+            await ApiClient.CreateDepartmentAsync(_newDepartment);
+            _newDepartment = new UpsertDepartmentDto { AnnualBudget = 950000m, IsActive = true };
+            await LoadAsync();
+        }
+    }
+}
+

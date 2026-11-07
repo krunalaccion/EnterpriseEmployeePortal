@@ -1,0 +1,16 @@
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\bin\Release\net9.0\EmployeePortal.Integrations.deps.json
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\bin\Release\net9.0\EmployeePortal.Integrations.dll
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\bin\Release\net9.0\EmployeePortal.Integrations.pdb
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\bin\Release\net9.0\EmployeePortal.Models.dll
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\bin\Release\net9.0\EmployeePortal.Models.pdb
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\obj\Release\net9.0\EmployeePortal.Integrations.csproj.AssemblyReference.cache
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\obj\Release\net9.0\EmployeePortal.Integrations.GeneratedMSBuildEditorConfig.editorconfig
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\obj\Release\net9.0\EmployeePortal.Integrations.AssemblyInfoInputs.cache
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\obj\Release\net9.0\EmployeePortal.Integrations.AssemblyInfo.cs
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\obj\Release\net9.0\EmployeePortal.Integrations.csproj.CoreCompileInputs.cache
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\obj\Release\net9.0\EmployeePortal.Integrations.sourcelink.json
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\obj\Release\net9.0\Employee.3C55A198.Up2Date
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\obj\Release\net9.0\EmployeePortal.Integrations.dll
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\obj\Release\net9.0\refint\EmployeePortal.Integrations.dll
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\obj\Release\net9.0\EmployeePortal.Integrations.pdb
+D:\air-gapped-API-remediator\air-gapped-API-remediator\EnterpriseEmployeePortal\src\EmployeePortal.Integrations\obj\Release\net9.0\ref\EmployeePortal.Integrations.dll

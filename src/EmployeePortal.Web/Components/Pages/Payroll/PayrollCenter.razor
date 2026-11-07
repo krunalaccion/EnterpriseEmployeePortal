@@ -1,0 +1,82 @@
+@page "/payroll"
+@inject IPortalApiClient ApiClient
+
+<PageTitle>Payroll Center | EnterpriseEmployeePortal</PageTitle>
+
+<h1 style="margin-top:0;">Payroll Processing &amp; Direct Deposit</h1>
+
+<div class="surface-card" style="margin-bottom: 1.5rem;">
+    <h3 style="margin-top:0;">Execute Bi-Weekly Payroll Run</h3>
+    <div class="form-row">
+        <div>
+            <label>Employee ID</label>
+            <input type="number" class="form-control" @bind="_runModel.EmployeeId" />
+        </div>
+        <div>
+            <label>Performance Bonus ($)</label>
+            <input type="number" class="form-control" @bind="_runModel.BonusAmount" />
+        </div>
+        <div style="display:flex; align-items:flex-end;">
+            <button class="btn btn-primary" @onclick="ProcessPayrollAsync">Process Payslip</button>
+        </div>
+    </div>
+</div>
+
+<div class="surface-card">
+    <h3 style="margin-top:0;">Processed Payslip Ledger</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Employee</th>
+                <th>Pay Period</th>
+                <th>Gross</th>
+                <th>Taxes</th>
+                <th>Bonus</th>
+                <th>Net Pay</th>
+                <th>ACH Reference</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in _records)
+            {
+                <tr>
+                    <td>#@p.Id</td>
+                    <td><strong>@p.EmployeeName</strong> (@p.EmployeeNumber)</td>
+                    <td>@p.PayPeriodStart.ToString("MM/dd") - @p.PayPeriodEnd.ToString("MM/dd/yyyy")</td>
+                    <td>@p.GrossSalary.ToString("C2")</td>
+                    <td>@((p.FederalTaxWithheld + p.StateTaxWithheld).ToString("C2"))</td>
+                    <td>@p.BonusAmount.ToString("C2")</td>
+                    <td><strong>@p.NetPay.ToString("C2")</strong></td>
+                    <td><code>@p.DirectDepositReference</code></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private IReadOnlyList<PayrollRecordDto> _records = Array.Empty<PayrollRecordDto>();
+    private CreatePayrollRunDto _runModel = new() { EmployeeId = 1, BonusAmount = 250m };
+
+    protected override async Task OnInitializedAsync() => await LoadAsync();
+
+    private async Task LoadAsync()
+    {
+        try
+        {
+            _records = await ApiClient.GetPayrollHistoryAsync();
+        }
+        catch
+        {
+            _records = Array.Empty<PayrollRecordDto>();
+        }
+    }
+
+    private async Task ProcessPayrollAsync()
+    {
+        await ApiClient.ProcessPayrollRunAsync(_runModel);
+        await LoadAsync();
+    }
+}
+

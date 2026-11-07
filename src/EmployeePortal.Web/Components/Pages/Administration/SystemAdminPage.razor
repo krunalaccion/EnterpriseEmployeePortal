@@ -1,0 +1,74 @@
+@page "/administration"
+@inject IPortalApiClient ApiClient
+
+<PageTitle>System Administration | EnterpriseEmployeePortal</PageTitle>
+
+<h1 style="margin-top:0;">Application Administration &amp; System Parameters</h1>
+
+<div class="surface-card" style="margin-bottom: 1.5rem;">
+    <h3 style="margin-top:0;">Update System Configuration Key</h3>
+    <div class="form-row">
+        <input class="form-control" placeholder="Setting Key" @bind="_updateDto.SettingKey" />
+        <input class="form-control" placeholder="Setting Value" @bind="_updateDto.SettingValue" />
+        <input class="form-control" placeholder="Group Name" @bind="_updateDto.GroupName" />
+        <button class="btn btn-primary" @onclick="SaveSettingAsync">Save Parameter</button>
+    </div>
+</div>
+
+<div class="surface-card">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Group</th>
+                <th>Key</th>
+                <th>Value</th>
+                <th>Description</th>
+                <th>Classification</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in _settings)
+            {
+                <tr>
+                    <td><span class="badge">@s.GroupName</span></td>
+                    <td><strong>@s.SettingKey</strong></td>
+                    <td><code>@s.SettingValue</code></td>
+                    <td>@s.Description</td>
+                    <td>@(s.IsSensitive ? "Sensitive" : "Public")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private IReadOnlyList<SystemSettingDto> _settings = Array.Empty<SystemSettingDto>();
+    private UpdateSystemSettingDto _updateDto = new()
+    {
+        SettingKey = "Portal.MaintenanceBanner",
+        SettingValue = "Disabled",
+        GroupName = "General",
+        Description = "Controls global banner visibility"
+    };
+
+    protected override async Task OnInitializedAsync() => await LoadAsync();
+
+    private async Task LoadAsync()
+    {
+        try
+        {
+            _settings = await ApiClient.GetSystemSettingsAsync();
+        }
+        catch
+        {
+            _settings = Array.Empty<SystemSettingDto>();
+        }
+    }
+
+    private async Task SaveSettingAsync()
+    {
+        await ApiClient.UpsertSystemSettingAsync(_updateDto);
+        await LoadAsync();
+    }
+}
+

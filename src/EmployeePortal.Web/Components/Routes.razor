@@ -1,0 +1,15 @@
+<Router AppAssembly="typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+        <FocusOnNavigate RouteData="routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="typeof(Layout.MainLayout)">
+            <div class="surface-card">
+                <h2>Module Not Found</h2>
+                <p>The requested HR portal view could not be located.</p>
+            </div>
+        </LayoutView>
+    </NotFound>
+</Router>
+
