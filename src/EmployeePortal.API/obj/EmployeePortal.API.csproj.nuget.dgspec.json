@@ -1,48 +1,43 @@
 {
   "format": 1,
   "restore": {
-    "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.API\\EmployeePortal.API.csproj": {}
+    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj": {}
   },
   "projects": {
-    "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.API\\EmployeePortal.API.csproj": {
+    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.API\\EmployeePortal.API.csproj",
+        "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj",
         "projectName": "EmployeePortal.API",
-        "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.API\\EmployeePortal.API.csproj",
-        "packagesPath": "C:\\Users\\VinayKumar\\.nuget\\packages\\",
-        "outputPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.API\\obj\\",
+        "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj",
+        "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
+        "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\VinayKumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
+            "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Business\\EmployeePortal.Business.csproj": {
-                "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Business\\EmployeePortal.Business.csproj"
+              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
+                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj"
               },
-              "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Data\\EmployeePortal.Data.csproj": {
-                "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Data\\EmployeePortal.Data.csproj"
+              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj": {
+                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj"
               },
-              "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Integrations\\EmployeePortal.Integrations.csproj": {
-                "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Integrations\\EmployeePortal.Integrations.csproj"
+              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj": {
+                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj"
               },
-              "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj": {
-                "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj"
+              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
               }
             }
           }
@@ -63,10 +58,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net9.0": {
+          "framework": "net9.0",
           "targetAlias": "net9.0",
           "dependencies": {
             "Newtonsoft.Json": {
@@ -85,6 +81,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.22, 9.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[9.0.22, 9.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.22, 9.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -93,43 +103,38 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Business\\EmployeePortal.Business.csproj": {
+    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Business\\EmployeePortal.Business.csproj",
+        "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
         "projectName": "EmployeePortal.Business",
-        "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Business\\EmployeePortal.Business.csproj",
-        "packagesPath": "C:\\Users\\VinayKumar\\.nuget\\packages\\",
-        "outputPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Business\\obj\\",
+        "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+        "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
+        "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\VinayKumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
+            "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Integrations\\EmployeePortal.Integrations.csproj": {
-                "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Integrations\\EmployeePortal.Integrations.csproj"
+              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj": {
+                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj"
               },
-              "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj": {
-                "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj"
+              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
               }
             }
           }
@@ -150,10 +155,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net9.0": {
+          "framework": "net9.0",
           "targetAlias": "net9.0",
           "dependencies": {
             "AutoMapper": {
@@ -180,6 +186,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.22, 9.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.22, 9.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -188,43 +204,38 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Data\\EmployeePortal.Data.csproj": {
+    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Data\\EmployeePortal.Data.csproj",
+        "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
         "projectName": "EmployeePortal.Data",
-        "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Data\\EmployeePortal.Data.csproj",
-        "packagesPath": "C:\\Users\\VinayKumar\\.nuget\\packages\\",
-        "outputPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Data\\obj\\",
+        "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+        "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
+        "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\VinayKumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
+            "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Business\\EmployeePortal.Business.csproj": {
-                "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Business\\EmployeePortal.Business.csproj"
+              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
+                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj"
               },
-              "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj": {
-                "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj"
+              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
               }
             }
           }
@@ -245,10 +256,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net9.0": {
+          "framework": "net9.0",
           "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
@@ -279,6 +291,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.22, 9.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.22, 9.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -287,40 +309,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Integrations\\EmployeePortal.Integrations.csproj": {
+    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Integrations\\EmployeePortal.Integrations.csproj",
+        "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
         "projectName": "EmployeePortal.Integrations",
-        "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Integrations\\EmployeePortal.Integrations.csproj",
-        "packagesPath": "C:\\Users\\VinayKumar\\.nuget\\packages\\",
-        "outputPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Integrations\\obj\\",
+        "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+        "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
+        "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\VinayKumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
+            "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj": {
-                "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj"
+              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
               }
             }
           }
@@ -341,10 +358,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net9.0": {
+          "framework": "net9.0",
           "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.Data.SqlClient": {
@@ -367,6 +385,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.22, 9.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.22, 9.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -375,36 +403,31 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj": {
+    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj",
+        "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
         "projectName": "EmployeePortal.Models",
-        "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj",
-        "packagesPath": "C:\\Users\\VinayKumar\\.nuget\\packages\\",
-        "outputPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\obj\\",
+        "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
+        "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
+        "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\VinayKumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
+            "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {}
           }
@@ -425,10 +448,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net9.0": {
+          "framework": "net9.0",
           "targetAlias": "net9.0",
           "dependencies": {
             "System.Drawing.Common": {
@@ -447,12 +471,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.22, 9.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.22, 9.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

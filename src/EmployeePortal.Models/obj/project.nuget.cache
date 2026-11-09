@@ -1,21 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "+NrxxqiH7RI=",
+  "dgSpecHash": "uRR0kbCTL0g=",
   "success": true,
-  "projectFilePath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj",
+  "projectFilePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\VinayKumar\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\VinayKumar\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\VinayKumar\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+    "/Users/krunaldharamshi/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "/Users/krunaldharamshi/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "/Users/krunaldharamshi/.nuget/packages/system.drawing.common/4.7.0/system.drawing.common.4.7.0.nupkg.sha512",
+    "/Users/krunaldharamshi/.nuget/packages/microsoft.netcore.app.ref/9.0.22/microsoft.netcore.app.ref.9.0.22.nupkg.sha512",
+    "/Users/krunaldharamshi/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.22/microsoft.aspnetcore.app.ref.9.0.22.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "NU1904",
       "level": "Warning",
       "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
-      "projectPath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\air-gapped-API-remediator\\air-gapped-API-remediator\\EnterpriseEmployeePortal\\src\\EmployeePortal.Models\\EmployeePortal.Models.csproj",
+      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
       "libraryId": "System.Drawing.Common",
       "targetGraphs": [
         "net9.0"
