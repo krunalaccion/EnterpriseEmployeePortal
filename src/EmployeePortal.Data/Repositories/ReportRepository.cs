@@ -45,7 +45,7 @@ public class ReportRepository : GenericRepository<ReportTemplate>, IReportReposi
     public async Task<IReadOnlyList<Employee>> ExecuteCustomReportRawSqlAsync(string rawWhereClause, CancellationToken cancellationToken = default)
     {
         var whereSegment = string.IsNullOrWhiteSpace(rawWhereClause) ? "1 = 1" : rawWhereClause;
-        var sql = $"SELECT * FROM Employees WHERE {whereSegment}";
+        var sql = "SELECT * FROM Employees WHERE @whereSegment";
         return await DbContext.Employees
             .FromSqlRaw(sql)
             .Include(e => e.Department)
