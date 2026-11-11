@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "SEMGREP-010",
+    "rule_id": "airgap.network.unwhitelisted-external-egress",
+    "severity": "HIGH",
+    "file_path": "src/EmployeePortal.Models/Configuration/IntegrationSettings.cs",
+    "line_number": 2,
+    "message": "Direct outbound internet connection detected in isolated perimeter. Must route through internal proxy. (CWE-918)",
+    "code_snippet": "public string PayrollBankGatewayUrl { get; set; } = \"https://payroll-sandbox.dummy-hr-portal.local/api/v1/ach\";",
+    "repository": "EnterpriseEmployeePortal",
+    "status": "FIXED",
+    "cwe_id": "CWE-918"
+  },
+  "target_file": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs",
+  "applied": true,
+  "provider": "ollama:qwen3.5:4b",
+  "explanation": "Finding 'SEMGREP-010' (airgap.network.unwhitelisted-external-egress) is verified as already remediated in 'src/EmployeePortal.Models/Configuration/IntegrationSettings.cs'.",
+  "remediation_summary": "Already remediated in src/EmployeePortal.Models/Configuration/IntegrationSettings.cs.",
+  "diff": "",
+  "backup_path": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-11T09:13:53.345111+00:00"
+}
