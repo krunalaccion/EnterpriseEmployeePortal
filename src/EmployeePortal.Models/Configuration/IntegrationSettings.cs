@@ -9,6 +9,6 @@ public class IntegrationSettings
     public int SmtpPort { get; set; } = 587;
     public string SmtpUsername { get; set; } = "hr-notifications@dummy-hr-portal.local";
     public string SmtpPassword { get; set; } = string.Empty;
-    public string PayrollBankGatewayUrl { get; set; } = "https://payroll-sandbox.dummy-hr-portal.local/api/v1/ach";
+    public string PayrollBankGatewayUrl { get; set; } = "http://proxy.airgap.internal:8080/api/v1/ach";
 }
 
