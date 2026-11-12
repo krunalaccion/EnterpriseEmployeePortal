@@ -3398,11 +3398,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj",
+      "projectUniqueName": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj",
       "projectName": "EmployeePortal.API",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj",
       "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
-      "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/obj/",
+      "outputPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
@@ -3418,17 +3418,17 @@
           "framework": "net9.0",
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
-              "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj"
+            "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
+              "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj"
             },
-            "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj": {
-              "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj"
+            "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj": {
+              "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj"
             },
-            "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj": {
-              "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj"
+            "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj": {
+              "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj"
             },
-            "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
-              "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
+            "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+              "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
             }
           }
         }
