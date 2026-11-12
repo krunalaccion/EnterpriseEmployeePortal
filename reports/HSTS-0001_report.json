@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "HSTS-0001",
+    "rule_id": "aspnet.headers.hsts-missing-heuristic",
+    "severity": "MEDIUM",
+    "file_path": "src/EmployeePortal.Web/Program.cs",
+    "line_number": 1,
+    "message": "app.UseHsts() is omitted in middleware pipeline.",
+    "code_snippet": "app.UseHsts() not found in Program.cs",
+    "repository": "EnterpriseEmployeePortal",
+    "status": "FIXED",
+    "cwe_id": "CWE-319"
+  },
+  "target_file": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/Program.cs",
+  "applied": true,
+  "provider": "ollama:qwen3.5:4b",
+  "explanation": "Secured ASP.NET Core middleware pipeline in Program.cs: enabled HTTP Strict Transport Security (HSTS - CWE-319), enforced HTTPS redirection, and ensured correct middleware ordering.",
+  "remediation_summary": "Enabled app.UseHsts() and app.UseHttpsRedirection() in Program.cs.",
+  "diff": "--- a/EnterpriseEmployeePortal/src/EmployeePortal.Web/Program.cs\n+++ b/EnterpriseEmployeePortal/src/EmployeePortal.Web/Program.cs\n@@ -20,8 +20,10 @@\n if (!app.Environment.IsDevelopment())\n {\n     app.UseExceptionHandler(\"/Error\", createScopeForErrors: true);\n-}\n \n+    app.UseHsts();}\n+\n+app.UseHttpsRedirection();\n app.UseStaticFiles();\n app.UseAntiforgery();\n ",
+  "backup_path": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/Program.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-12T07:37:36.465561+00:00"
+}

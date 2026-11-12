@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "SQLI-0005",
+    "rule_id": "csharp-sql-injection",
+    "severity": "HIGH",
+    "file_path": "src/EmployeePortal.Integrations/Payroll/XmlPayrollExportBridge.cs",
+    "line_number": 73,
+    "message": "Unparameterized SQL string interpolation/concatenation with 'rawPeriodFilter' at line 73 passed to SqlCommand at line 74.",
+    "code_snippet": "var unsafeCommandText = $\"SELECT Id, DirectDepositReference, NetPay FROM PayrollRecords WHERE PaymentStatus = '{rawPeriodFilter}'\"",
+    "repository": "EnterpriseEmployeePortal",
+    "status": "FIXED",
+    "cwe_id": "CWE-89"
+  },
+  "target_file": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/Payroll/XmlPayrollExportBridge.cs",
+  "applied": true,
+  "provider": "ollama:qwen3.5:4b",
+  "explanation": "Replaced dynamic SQL string interpolation in `src/EmployeePortal.Integrations/Payroll/XmlPayrollExportBridge.cs` with constant parameterized query and bound parameters safely via SqlCommand.Parameters.AddWithValue (CWE-89).",
+  "remediation_summary": "Replaced dynamic SQL string interpolation with parameterized SqlCommand query.",
+  "diff": "--- a/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/Payroll/XmlPayrollExportBridge.cs\n+++ b/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/Payroll/XmlPayrollExportBridge.cs\n@@ -70,8 +70,9 @@\n         await using var connection = new SqlConnection(connectionString);\n         await connection.OpenAsync(cancellationToken);\n \n-        var unsafeCommandText = $\"SELECT Id, DirectDepositReference, NetPay FROM PayrollRecords WHERE PaymentStatus = '{rawPeriodFilter}'\";\n+        const string unsafeCommandText = \"SELECT Id, DirectDepositReference, NetPay FROM PayrollRecords WHERE PaymentStatus = @rawPeriodFilter\";\n         await using var command = new SqlCommand(unsafeCommandText, connection);\n+ command.Parameters.AddWithValue(\"@rawPeriodFilter\", rawPeriodFilter);\n         await using var reader = await command.ExecuteReaderAsync(cancellationToken);\n \n         while (await reader.ReadAsync(cancellationToken))",
+  "backup_path": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/Payroll/XmlPayrollExportBridge.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-12T07:38:00.513203+00:00"
+}
