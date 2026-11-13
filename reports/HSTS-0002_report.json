@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "HSTS-0002",
+    "rule_id": "aspnet.headers.hsts-missing-heuristic",
+    "severity": "MEDIUM",
+    "file_path": "src/EmployeePortal.API/Program.cs",
+    "line_number": 1,
+    "message": "app.UseHsts() is omitted in middleware pipeline.",
+    "code_snippet": "app.UseHsts() not found in Program.cs",
+    "repository": "EnterpriseEmployeePortal",
+    "status": "FIXED",
+    "cwe_id": "CWE-319"
+  },
+  "target_file": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.API/Program.cs",
+  "applied": true,
+  "provider": "ollama:qwen3.5:4b",
+  "explanation": "Secured ASP.NET Core middleware pipeline in Program.cs: enabled HTTP Strict Transport Security (HSTS - CWE-319), enforced HTTPS redirection, and ensured correct middleware ordering.",
+  "remediation_summary": "Enabled app.UseHsts() and app.UseHttpsRedirection() in Program.cs.",
+  "diff": "--- a/EnterpriseEmployeePortal/src/EmployeePortal.API/Program.cs\n+++ b/EnterpriseEmployeePortal/src/EmployeePortal.API/Program.cs\n@@ -55,6 +55,8 @@\n \n app.UseCors(\"PermissiveScannerTestCors\");\n \n+app.UseHsts();\n+app.UseHttpsRedirection();\n app.UseAuthentication();\n app.UseAuthorization();\n ",
+  "backup_path": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.API/Program.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-13T07:57:34.518934+00:00"
+}
