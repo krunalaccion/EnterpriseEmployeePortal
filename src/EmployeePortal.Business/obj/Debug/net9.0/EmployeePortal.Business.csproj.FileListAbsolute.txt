@@ -16,3 +16,21 @@
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/refint/EmployeePortal.Business.dll
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/EmployeePortal.Business.pdb
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/ref/EmployeePortal.Business.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/bin/Debug/net9.0/EmployeePortal.Business.deps.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/bin/Debug/net9.0/EmployeePortal.Business.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/bin/Debug/net9.0/EmployeePortal.Business.pdb
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/bin/Debug/net9.0/EmployeePortal.Integrations.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/bin/Debug/net9.0/EmployeePortal.Models.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/bin/Debug/net9.0/EmployeePortal.Models.pdb
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/bin/Debug/net9.0/EmployeePortal.Integrations.pdb
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/EmployeePortal.Business.csproj.AssemblyReference.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/EmployeePortal.Business.GeneratedMSBuildEditorConfig.editorconfig
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/EmployeePortal.Business.AssemblyInfoInputs.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/EmployeePortal.Business.AssemblyInfo.cs
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/EmployeePortal.Business.csproj.CoreCompileInputs.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/EmployeePortal.Business.sourcelink.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/Employee.5F838565.Up2Date
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/EmployeePortal.Business.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/refint/EmployeePortal.Business.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/EmployeePortal.Business.pdb
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/Debug/net9.0/ref/EmployeePortal.Business.dll
