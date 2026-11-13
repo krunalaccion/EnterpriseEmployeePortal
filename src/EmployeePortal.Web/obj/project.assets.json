@@ -176,11 +176,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Web/EmployeePortal.Web.csproj",
+      "projectUniqueName": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Web/EmployeePortal.Web.csproj",
       "projectName": "EmployeePortal.Web",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Web/EmployeePortal.Web.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Web/EmployeePortal.Web.csproj",
       "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
-      "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/",
+      "outputPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Web/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
@@ -196,8 +196,8 @@
           "framework": "net9.0",
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
-              "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
+            "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+              "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
             }
           }
         }

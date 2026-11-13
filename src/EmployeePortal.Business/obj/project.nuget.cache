@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "doGM8y21gtU=",
+  "dgSpecHash": "BkPpnAueukk=",
   "success": true,
-  "projectFilePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+  "projectFilePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
   "expectedPackageFiles": [
     "/Users/krunaldharamshi/.nuget/packages/automapper/9.0.0/automapper.9.0.0.nupkg.sha512",
     "/Users/krunaldharamshi/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
@@ -60,9 +60,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'AutoMapper' 9.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net9.0"
@@ -72,9 +72,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-5mfx-4wcx-rv27",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net9.0"
@@ -84,9 +84,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net9.0"
@@ -96,9 +96,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net9.0"
@@ -108,9 +108,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Microsoft.Data.SqlClient' 5.1.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "libraryId": "Microsoft.Data.SqlClient",
       "targetGraphs": [
         "net9.0"
@@ -120,9 +120,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Microsoft.IdentityModel.JsonWebTokens' 6.33.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "libraryId": "Microsoft.IdentityModel.JsonWebTokens",
       "targetGraphs": [
         "net9.0"
@@ -132,9 +132,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Newtonsoft.Json' 12.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net9.0"
@@ -144,9 +144,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Formats.Asn1' 5.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-447r-wph3-92pm",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "libraryId": "System.Formats.Asn1",
       "targetGraphs": [
         "net9.0"
@@ -156,9 +156,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'System.IdentityModel.Tokens.Jwt' 6.33.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_jv7e_0lm/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
       "libraryId": "System.IdentityModel.Tokens.Jwt",
       "targetGraphs": [
         "net9.0"
