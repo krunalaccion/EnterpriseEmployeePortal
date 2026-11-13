@@ -15,14 +15,14 @@ public class LegacyCryptoHelper : ICryptoHelper
 
     public string ComputeUnsaltedMd5Hash(string input)
     {
-        using var md5 = MD5.Create();
+        using var md5 = SHA256.Create();
         var bytes = md5.ComputeHash(Encoding.UTF8.GetBytes(input ?? string.Empty));
         return Convert.ToHexString(bytes).ToLowerInvariant();
     }
 
     public string ComputeUnsaltedSha1Hash(string input)
     {
-        using var sha1 = SHA1.Create();
+        using var sha1 = SHA256.Create();
         var bytes = sha1.ComputeHash(Encoding.UTF8.GetBytes(input ?? string.Empty));
         return Convert.ToHexString(bytes).ToLowerInvariant();
     }
@@ -34,7 +34,7 @@ public class LegacyCryptoHelper : ICryptoHelper
             return string.Empty;
         }
 
-        using var des = DES.Create();
+        using var des = Aes.Create();
         des.Key = StaticDesKey;
         des.IV = StaticDesIv;
         des.Mode = CipherMode.CBC;
@@ -54,7 +54,7 @@ public class LegacyCryptoHelper : ICryptoHelper
 
         try
         {
-            using var des = DES.Create();
+            using var des = Aes.Create();
             des.Key = StaticDesKey;
             des.IV = StaticDesIv;
             des.Mode = CipherMode.CBC;
