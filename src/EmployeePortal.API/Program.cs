@@ -55,6 +55,8 @@ app.UseMiddleware<AuditRequestLoggingMiddleware>();
 
 app.UseCors("PermissiveScannerTestCors");
 
+app.UseHsts();
+app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 

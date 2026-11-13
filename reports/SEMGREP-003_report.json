@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "SEMGREP-003",
+    "rule_id": "airgap.generic.crypto.weak-algorithm",
+    "severity": "MEDIUM",
+    "file_path": "src/EmployeePortal.Business/Security/LegacyCryptoHelper.cs",
+    "line_number": 3,
+    "message": "Deprecated or broken cryptographic algorithm used (DES, MD5, SHA1). Use AES-GCM or SHA-256 instead. (CWE-327/328)",
+    "code_snippet": "using var md5 = MD5.Create();",
+    "repository": "EnterpriseEmployeePortal",
+    "status": "FIXED",
+    "cwe_id": "CWE-327"
+  },
+  "target_file": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/Security/LegacyCryptoHelper.cs",
+  "applied": true,
+  "provider": "ollama:qwen3.5:4b",
+  "explanation": "Finding 'SEMGREP-003' (airgap.generic.crypto.weak-algorithm) is verified as already remediated in 'src/EmployeePortal.Business/Security/LegacyCryptoHelper.cs'.",
+  "remediation_summary": "Already remediated in src/EmployeePortal.Business/Security/LegacyCryptoHelper.cs.",
+  "diff": "",
+  "backup_path": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/Security/LegacyCryptoHelper.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-13T09:56:03.543047+00:00"
+}
