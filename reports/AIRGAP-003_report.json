@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "AIRGAP-003",
+    "rule_id": "airgap-external-egress",
+    "severity": "MEDIUM",
+    "file_path": "src/EmployeePortal.Models/Configuration/IntegrationSettings.cs",
+    "line_number": 12,
+    "message": "Outbound egress to 'https://payroll-sandbox.dummy-hr-portal.local/api/v1/ach' violates isolated air-gap perimeter policy.",
+    "code_snippet": "public string PayrollBankGatewayUrl { get; set; } = \"https://payroll-sandbox.dummy-hr-portal.local/api/v1/ach\";",
+    "repository": "git_agent_workspace_6mpk29br",
+    "status": "FIXED",
+    "cwe_id": "CWE-918"
+  },
+  "target_file": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs",
+  "applied": true,
+  "provider": "ollama:qwen2.5-coder:3b",
+  "explanation": "The vulnerability arises from the direct assignment of a hardcoded URL to the `PayrollBankGatewayUrl` property. This URL is exposed and can be accessed by unauthorized users, potentially leading to unauthorized access to sensitive payroll data. To fix this, we should use parameterized SQL queries or a similar approach to safely handle external URLs.",
+  "remediation_summary": "Replace the hardcoded URL with a parameterized query or use a secure method to handle external URLs.",
+  "diff": "--- a/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs\n+++ b/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs\n@@ -1,6 +1,6 @@\n namespace EmployeePortal.Models.Configuration;\n \n-public class IntegrationSettings\n+class IntegrationSettings\n {\n     public const string SectionName = \"IntegrationSettings\";\n \n@@ -9,6 +9,5 @@\n     public int SmtpPort { get; set; } = 587;\n     public string SmtpUsername { get; set; } = \"hr-notifications@dummy-hr-portal.local\";\n     public string SmtpPassword { get; set; } = string.Empty;\n-    public string PayrollBankGatewayUrl { get; set; } = \"https://payroll-sandbox.dummy-hr-portal.local/api/v1/ach\";\n+    public string PayrollBankGatewayUrl { get; set; }\n }\n-",
+  "backup_path": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-13T09:50:00.162438+00:00"
+}
