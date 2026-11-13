@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/tests/EmployeePortal.IntegrationTests/EmployeePortal.IntegrationTests.csproj": {}
+    "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/tests/EmployeePortal.IntegrationTests/EmployeePortal.IntegrationTests.csproj": {}
   },
   "projects": {
-    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj": {
+    "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.API/EmployeePortal.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj",
+        "projectUniqueName": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.API/EmployeePortal.API.csproj",
         "projectName": "EmployeePortal.API",
-        "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj",
+        "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.API/EmployeePortal.API.csproj",
         "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
-        "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/obj/",
+        "outputPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
@@ -27,17 +27,17 @@
             "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Business/EmployeePortal.Business.csproj"
               },
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj"
               },
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj"
               },
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
               }
             }
           }
@@ -107,14 +107,14 @@
         }
       }
     },
-    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
+    "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+        "projectUniqueName": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
         "projectName": "EmployeePortal.Business",
-        "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
+        "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Business/EmployeePortal.Business.csproj",
         "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
-        "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/obj/",
+        "outputPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Business/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
@@ -130,11 +130,11 @@
             "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj"
               },
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
               }
             }
           }
@@ -208,14 +208,14 @@
         }
       }
     },
-    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj": {
+    "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+        "projectUniqueName": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
         "projectName": "EmployeePortal.Data",
-        "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+        "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
         "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
-        "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/obj/",
+        "outputPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
@@ -231,11 +231,11 @@
             "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Business/EmployeePortal.Business.csproj"
               },
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
               }
             }
           }
@@ -313,14 +313,14 @@
         }
       }
     },
-    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj": {
+    "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+        "projectUniqueName": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
         "projectName": "EmployeePortal.Integrations",
-        "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+        "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
         "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
-        "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/obj/",
+        "outputPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Integrations/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
@@ -336,8 +336,8 @@
             "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
               }
             }
           }
@@ -407,14 +407,14 @@
         }
       }
     },
-    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+    "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
+        "projectUniqueName": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
         "projectName": "EmployeePortal.Models",
-        "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
+        "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
         "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
-        "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/",
+        "outputPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
@@ -490,14 +490,14 @@
         }
       }
     },
-    "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/tests/EmployeePortal.IntegrationTests/EmployeePortal.IntegrationTests.csproj": {
+    "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/tests/EmployeePortal.IntegrationTests/EmployeePortal.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/tests/EmployeePortal.IntegrationTests/EmployeePortal.IntegrationTests.csproj",
+        "projectUniqueName": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/tests/EmployeePortal.IntegrationTests/EmployeePortal.IntegrationTests.csproj",
         "projectName": "EmployeePortal.IntegrationTests",
-        "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/tests/EmployeePortal.IntegrationTests/EmployeePortal.IntegrationTests.csproj",
+        "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/tests/EmployeePortal.IntegrationTests/EmployeePortal.IntegrationTests.csproj",
         "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
-        "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/tests/EmployeePortal.IntegrationTests/obj/",
+        "outputPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/tests/EmployeePortal.IntegrationTests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"
@@ -513,17 +513,17 @@
             "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.API/EmployeePortal.API.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.API/EmployeePortal.API.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.API/EmployeePortal.API.csproj"
               },
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Business/EmployeePortal.Business.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Business/EmployeePortal.Business.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Business/EmployeePortal.Business.csproj"
               },
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj"
               },
-              "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
-                "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
+              "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj": {
+                "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/EmployeePortal.Models.csproj"
               }
             }
           }

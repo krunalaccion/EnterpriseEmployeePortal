@@ -11,3 +11,16 @@
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/refint/EmployeePortal.Models.dll
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.pdb
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/ref/EmployeePortal.Models.dll
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/bin/Debug/net9.0/EmployeePortal.Models.deps.json
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/bin/Debug/net9.0/EmployeePortal.Models.dll
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/bin/Debug/net9.0/EmployeePortal.Models.pdb
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.csproj.AssemblyReference.cache
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.GeneratedMSBuildEditorConfig.editorconfig
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.AssemblyInfoInputs.cache
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.AssemblyInfo.cs
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.csproj.CoreCompileInputs.cache
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.sourcelink.json
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.dll
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/obj/Debug/net9.0/refint/EmployeePortal.Models.dll
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.pdb
+/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Models/obj/Debug/net9.0/ref/EmployeePortal.Models.dll

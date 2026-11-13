@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GKkG7/YGcss=",
+  "dgSpecHash": "Y8bqXGjJm4Q=",
   "success": true,
-  "projectFilePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+  "projectFilePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
   "expectedPackageFiles": [
     "/Users/krunaldharamshi/.nuget/packages/automapper/9.0.0/automapper.9.0.0.nupkg.sha512",
     "/Users/krunaldharamshi/.nuget/packages/azure.core/1.41.0/azure.core.1.41.0.nupkg.sha512",
@@ -76,9 +76,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'AutoMapper' 9.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net9.0"
@@ -88,9 +88,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Newtonsoft.Json' 12.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net9.0"
@@ -100,9 +100,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Linq.Dynamic.Core' 1.2.18 has a known high severity vulnerability, https://github.com/advisories/GHSA-4cv2-4hjh-77rx",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
       "libraryId": "System.Linq.Dynamic.Core",
       "targetGraphs": [
         "net9.0"
@@ -112,9 +112,9 @@
       "code": "NU1904",
       "level": "Warning",
       "message": "Package 'System.Linq.Dynamic.Core' 1.2.18 has a known critical severity vulnerability, https://github.com/advisories/GHSA-w65q-jcmv-28gj",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+      "projectPath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
+      "filePath": "/private/var/folders/c9/vtd3f5rj37q6ptlhhrkz27b40000gp/T/git_agent_workspace_6mpk29br/src/EmployeePortal.Data/EmployeePortal.Data.csproj",
       "libraryId": "System.Linq.Dynamic.Core",
       "targetGraphs": [
         "net9.0"
