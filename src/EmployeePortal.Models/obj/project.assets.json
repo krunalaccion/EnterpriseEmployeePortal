@@ -158,11 +158,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
+      "projectUniqueName": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
       "projectName": "EmployeePortal.Models",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/EmployeePortal.Models.csproj",
       "packagesPath": "/Users/krunaldharamshi/.nuget/packages/",
-      "outputPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/",
+      "outputPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/krunaldharamshi/.nuget/NuGet/NuGet.Config"

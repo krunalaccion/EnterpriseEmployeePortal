@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "SQLI-0005",
+    "rule_id": "csharp-sql-injection",
+    "severity": "HIGH",
+    "file_path": "src/EmployeePortal.Integrations/Payroll/XmlPayrollExportBridge.cs",
+    "line_number": 73,
+    "message": "Unparameterized SQL string interpolation/concatenation with 'rawPeriodFilter' at line 73 passed to SqlCommand at line 74.",
+    "code_snippet": "var unsafeCommandText = $\"SELECT Id, DirectDepositReference, NetPay FROM PayrollRecords WHERE PaymentStatus = '{rawPeriodFilter}'\"",
+    "repository": "EnterpriseEmployeePortal",
+    "status": "FIXED",
+    "cwe_id": "CWE-89"
+  },
+  "target_file": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/Payroll/XmlPayrollExportBridge.cs",
+  "applied": true,
+  "provider": "ollama:gemma4:e4b",
+  "explanation": "The original code constructed the SQL query using string interpolation, directly embedding the user-supplied `rawPeriodFilter` variable. This makes the query vulnerable to SQL Injection (CWE-89), as an attacker could input malicious SQL syntax (e.g., `' OR 1=1 --`) to alter the query's logic. The fix replaces the unsafe string construction with a parameterized query. A placeholder (`@PeriodFilter`) is used in the SQL command text, and the `rawPeriodFilter` value is safely passed to the `SqlCommand` using `command.Parameters.AddWithValue()`, ensuring that the input is treated as data, not executable code.",
+  "remediation_summary": "Replaced string interpolation for SQL query construction with a parameterized query using SqlCommand.Parameters.AddWithValue.",
+  "diff": "--- a/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/Payroll/XmlPayrollExportBridge.cs\n+++ b/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/Payroll/XmlPayrollExportBridge.cs\n@@ -70,8 +70,9 @@\n         await using var connection = new SqlConnection(connectionString);\n         await connection.OpenAsync(cancellationToken);\n \n-        var unsafeCommandText = $\"SELECT Id, DirectDepositReference, NetPay FROM PayrollRecords WHERE PaymentStatus = '{rawPeriodFilter}'\";\n-        await using var command = new SqlCommand(unsafeCommandText, connection);\n+        var safeCommandText = \"SELECT Id, DirectDepositReference, NetPay FROM PayrollRecords WHERE PaymentStatus = @PeriodFilter\";\n+        await using var command = new SqlCommand(safeCommandText, connection);\n+        command.Parameters.AddWithValue(\"@PeriodFilter\", rawPeriodFilter);\n         await using var reader = await command.ExecuteReaderAsync(cancellationToken);\n \n         while (await reader.ReadAsync(cancellationToken))\n@@ -82,4 +83,3 @@\n         return rows;\n     }\n }\n-",
+  "backup_path": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/Payroll/XmlPayrollExportBridge.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-18T17:18:16.715024+00:00"
+}

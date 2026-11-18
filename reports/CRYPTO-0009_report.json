@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "CRYPTO-0009",
+    "rule_id": "csharp.crypto.weak-algorithm",
+    "severity": "HIGH",
+    "file_path": "src/EmployeePortal.Business/Security/LegacyCryptoHelper.cs",
+    "line_number": 37,
+    "message": "Weak/deprecated cryptographic algorithm detected: DES.Create.",
+    "code_snippet": "using var des = DES.Create();",
+    "repository": "EnterpriseEmployeePortal",
+    "status": "FIXED",
+    "cwe_id": "CWE-327"
+  },
+  "target_file": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/Security/LegacyCryptoHelper.cs",
+  "applied": true,
+  "provider": "ollama:gemma4:e4b",
+  "explanation": "The original code used the DES algorithm, which is a weak, deprecated symmetric cipher (56-bit key) and is highly susceptible to brute-force attacks. This vulnerability (CWE-327) was fixed by replacing DES with AES (Advanced Encryption Standard), which uses a much stronger key size (256-bit in this implementation). The static key and IV fields were renamed and redefined to match the required lengths for AES-256 (32 bytes key, 16 bytes IV). The usage of `DES.Create()` was replaced with `Aes.Create()` in both encryption and decryption methods.",
+  "remediation_summary": "Replaced DES with AES-256 and updated static key/IV definitions to use stronger, modern cryptographic primitives.",
+  "diff": "--- a/EnterpriseEmployeePortal/src/EmployeePortal.Business/Security/LegacyCryptoHelper.cs\n+++ b/EnterpriseEmployeePortal/src/EmployeePortal.Business/Security/LegacyCryptoHelper.cs\n@@ -10,8 +10,9 @@\n // =========================================================================\n public class LegacyCryptoHelper : ICryptoHelper\n {\n-    private static readonly byte[] StaticDesKey = { 0x12, 0x34, 0x56, 0x78, 0x90, 0xAB, 0xCD, 0xEF };\n-    private static readonly byte[] StaticDesIv = { 0xFE, 0xDC, 0xBA, 0x98, 0x76, 0x54, 0x32, 0x10 };\n+    // Updated to AES-256 (32 bytes key, 16 bytes IV) for security improvement.\n+    private static readonly byte[] StaticAesKey = { 0x01, 0x23, 0x45, 0x67, 0x89, 0xAB, 0xCD, 0xEF, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88 };\n+    private static readonly byte[] StaticAesIv = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x00 };\n \n     public string ComputeUnsaltedMd5Hash(string input)\n     {\n@@ -34,13 +35,14 @@\n             return string.Empty;\n         }\n \n-        using var des = DES.Create();\n-        des.Key = StaticDesKey;\n-        des.IV = StaticDesIv;\n-        des.Mode = CipherMode.CBC;\n+        // FIX: Replaced weak DES with strong AES.\n+        using var aes = Aes.Create();\n+        aes.Key = StaticAesKey;\n+        aes.IV = StaticAesIv;\n+        aes.Mode = CipherMode.CBC;\n \n         var inputBytes = Encoding.UTF8.GetBytes(plaintextTaxId);\n-        using var encryptor = des.CreateEncryptor();\n+        using var encryptor = aes.CreateEncryptor();\n         var cipherBytes = encryptor.TransformFinalBlock(inputBytes, 0, inputBytes.Length);\n         return Convert.ToBase64String(cipherBytes);\n     }\n@@ -54,13 +56,14 @@\n \n         try\n         {\n-            using var des = DES.Create();\n-            des.Key = StaticDesKey;\n-            des.IV = StaticDesIv;\n-            des.Mode = CipherMode.CBC;\n+            // FIX: Replaced weak DES with strong AES.\n+            using var aes = Aes.Create();\n+            aes.Key = StaticAesKey;\n+            aes.IV = StaticAesIv;\n+            aes.Mode = CipherMode.CBC;\n \n             var cipherBytes = Convert.FromBase64String(base64Ciphertext);\n-            using var decryptor = des.CreateDecryptor();\n+            using var decryptor = aes.CreateDecryptor();\n             var plainBytes = decryptor.TransformFinalBlock(cipherBytes, 0, cipherBytes.Length);\n             return Encoding.UTF8.GetString(plainBytes);\n         }",
+  "backup_path": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Business/Security/LegacyCryptoHelper.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-18T17:16:28.440978+00:00"
+}

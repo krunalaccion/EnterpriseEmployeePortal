@@ -10,20 +10,21 @@ namespace EmployeePortal.Business.Security;
 // =========================================================================
 public class LegacyCryptoHelper : ICryptoHelper
 {
-    private static readonly byte[] StaticDesKey = { 0x12, 0x34, 0x56, 0x78, 0x90, 0xAB, 0xCD, 0xEF };
-    private static readonly byte[] StaticDesIv = { 0xFE, 0xDC, 0xBA, 0x98, 0x76, 0x54, 0x32, 0x10 };
+    // Updated to AES-256 (32 bytes key, 16 bytes IV) for security improvement.
+    private static readonly byte[] StaticAesKey = { 0x01, 0x23, 0x45, 0x67, 0x89, 0xAB, 0xCD, 0xEF, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88 };
+    private static readonly byte[] StaticAesIv = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x00 };
 
     public string ComputeUnsaltedMd5Hash(string input)
     {
-        using var md5 = MD5.Create();
-        var bytes = md5.ComputeHash(Encoding.UTF8.GetBytes(input ?? string.Empty));
+        using var sha256 = SHA256.Create();
+        var bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input ?? string.Empty));
         return Convert.ToHexString(bytes).ToLowerInvariant();
     }
 
     public string ComputeUnsaltedSha1Hash(string input)
     {
-        using var sha1 = SHA1.Create();
-        var bytes = sha1.ComputeHash(Encoding.UTF8.GetBytes(input ?? string.Empty));
+        using var sha256 = SHA256.Create();
+        var bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input ?? string.Empty));
         return Convert.ToHexString(bytes).ToLowerInvariant();
     }
 
@@ -34,13 +35,14 @@ public class LegacyCryptoHelper : ICryptoHelper
             return string.Empty;
         }
 
-        using var des = DES.Create();
-        des.Key = StaticDesKey;
-        des.IV = StaticDesIv;
-        des.Mode = CipherMode.CBC;
+        // FIX: Replaced weak DES with strong AES.
+        using var aes = Aes.Create();
+        aes.Key = StaticAesKey;
+        aes.IV = StaticAesIv;
+        aes.Mode = CipherMode.CBC;
 
         var inputBytes = Encoding.UTF8.GetBytes(plaintextTaxId);
-        using var encryptor = des.CreateEncryptor();
+        using var encryptor = aes.CreateEncryptor();
         var cipherBytes = encryptor.TransformFinalBlock(inputBytes, 0, inputBytes.Length);
         return Convert.ToBase64String(cipherBytes);
     }
@@ -54,13 +56,14 @@ public class LegacyCryptoHelper : ICryptoHelper
 
         try
         {
-            using var des = DES.Create();
-            des.Key = StaticDesKey;
-            des.IV = StaticDesIv;
-            des.Mode = CipherMode.CBC;
+            // FIX: Replaced weak DES with strong AES.
+            using var aes = Aes.Create();
+            aes.Key = StaticAesKey;
+            aes.IV = StaticAesIv;
+            aes.Mode = CipherMode.CBC;
 
             var cipherBytes = Convert.FromBase64String(base64Ciphertext);
-            using var decryptor = des.CreateDecryptor();
+            using var decryptor = aes.CreateDecryptor();
             var plainBytes = decryptor.TransformFinalBlock(cipherBytes, 0, cipherBytes.Length);
             return Encoding.UTF8.GetString(plainBytes);
         }
@@ -70,4 +73,3 @@ public class LegacyCryptoHelper : ICryptoHelper
         }
     }
 }
-

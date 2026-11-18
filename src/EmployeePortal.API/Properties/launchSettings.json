@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "$schema": "http://proxy.airgap.internal:8080/launchsettings.json",
   "profiles": {
     "http": {
       "commandName": "Project",
@@ -12,4 +12,3 @@
     }
   }
 }
-

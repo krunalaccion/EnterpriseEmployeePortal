@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IbUxN4J1pcA=",
+  "dgSpecHash": "5xxuVLDVxrA=",
   "success": true,
-  "projectFilePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Web/EmployeePortal.Web.csproj",
+  "projectFilePath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/EmployeePortal.Web.csproj",
   "expectedPackageFiles": [
     "/Users/krunaldharamshi/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/Users/krunaldharamshi/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
@@ -16,9 +16,9 @@
       "code": "NU1904",
       "level": "Warning",
       "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Web/EmployeePortal.Web.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/EmployeePortal.Web.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Web/EmployeePortal.Web.csproj",
+      "filePath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/EmployeePortal.Web.csproj",
       "libraryId": "System.Drawing.Common",
       "targetGraphs": [
         "net9.0"
