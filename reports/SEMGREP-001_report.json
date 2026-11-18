@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "SEMGREP-001",
+    "rule_id": "airgap.network.unwhitelisted-external-egress",
+    "severity": "HIGH",
+    "file_path": "src/EmployeePortal.Models/Configuration/IntegrationSettings.cs",
+    "line_number": 12,
+    "message": "Direct outbound internet connection detected in isolated perimeter. Must route through internal proxy. (CWE-918)",
+    "code_snippet": "public string PayrollBankGatewayUrl { get; set; } = \"http://internal-proxy.local/payroll/api/v1/ach\";",
+    "repository": "repository",
+    "status": "FIXED",
+    "cwe_id": "CWE-918"
+  },
+  "target_file": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs",
+  "applied": true,
+  "provider": "ollama:gemma4:e4b",
+  "explanation": "The original code hardcoded a network endpoint URL (`PayrollBankGatewayUrl`) directly into the source file. In an air-gapped or highly restricted perimeter environment, hardcoding network dependencies is a security risk (CWE-918), as it prevents dynamic configuration and increases the risk of misconfiguration or unauthorized external communication. The fix removes the hardcoded default value, ensuring that this property must be explicitly configured via external configuration files or environment variables, which is the secure practice for managing settings in isolated systems.",
+  "remediation_summary": "Removed the hardcoded default value from PayrollBankGatewayUrl to enforce external configuration.",
+  "diff": "--- a/repository/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs\n+++ b/repository/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs\n@@ -9,6 +9,6 @@\n     public int SmtpPort { get; set; } = 587;\n     public string SmtpUsername { get; set; } = \"hr-notifications@dummy-hr-portal.local\";\n     public string SmtpPassword { get; set; } = string.Empty;\n-    public string PayrollBankGatewayUrl { get; set; } = \"http://internal-proxy.local/payroll/api/v1/ach\";\n+    public string PayrollBankGatewayUrl { get; set; }\n }\n ",
+  "backup_path": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/Configuration/IntegrationSettings.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-18T12:11:57.735997+00:00"
+}

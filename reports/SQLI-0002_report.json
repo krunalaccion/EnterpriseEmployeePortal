@@ -1,0 +1,23 @@
+{
+  "finding": {
+    "finding_id": "SQLI-0002",
+    "rule_id": "csharp-sql-injection",
+    "severity": "HIGH",
+    "file_path": "src/EmployeePortal.Data/Repositories/ReportRepository.cs",
+    "line_number": 48,
+    "message": "Unparameterized SQL string interpolation/concatenation with 'whereSegment' at line 48 passed to FromSqlRaw at line 50.",
+    "code_snippet": "var sql = $\"SELECT * FROM Employees WHERE {whereSegment}\"",
+    "repository": "EnterpriseEmployeePortal",
+    "status": "FIXED",
+    "cwe_id": "CWE-89"
+  },
+  "target_file": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Data/Repositories/ReportRepository.cs",
+  "applied": true,
+  "provider": "ollama:gemma4:e4b",
+  "explanation": "The original code used string interpolation (`$\"SELECT * FROM Employees WHERE {whereSegment}\"`) to construct the SQL query, directly embedding the user-supplied `rawWhereClause`. This allowed an attacker to inject arbitrary SQL commands (SQL Injection, CWE-89). The fix replaces the dynamic string construction with a parameterized query structure (`@p0`). This forces the database provider to treat the input `rawWhereClause` strictly as a data value, not as executable SQL code, thereby eliminating the vulnerability. Note: This fix assumes the input is intended to filter a single column (e.g., Department) and not to construct complex, arbitrary WHERE clauses.",
+  "remediation_summary": "Replaced vulnerable string interpolation with a parameterized SQL query using FromSqlRaw and a corresponding parameter.",
+  "diff": "--- a/EnterpriseEmployeePortal/src/EmployeePortal.Data/Repositories/ReportRepository.cs\n+++ b/EnterpriseEmployeePortal/src/EmployeePortal.Data/Repositories/ReportRepository.cs\n@@ -44,10 +44,9 @@\n     // =========================================================================\n     public async Task<IReadOnlyList<Employee>> ExecuteCustomReportRawSqlAsync(string rawWhereClause, CancellationToken cancellationToken = default)\n     {\n-        var whereSegment = string.IsNullOrWhiteSpace(rawWhereClause) ? \"1 = 1\" : rawWhereClause;\n-        var sql = $\"SELECT * FROM Employees WHERE {whereSegment}\";\n+        var sql = \"SELECT * FROM Employees WHERE Department = @p0\";\n         return await DbContext.Employees\n-            .FromSqlRaw(sql)\n+            .FromSqlRaw(sql, rawWhereClause)\n             .Include(e => e.Department)\n             .AsNoTracking()\n             .ToListAsync(cancellationToken);",
+  "backup_path": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Data/Repositories/ReportRepository.cs.bak",
+  "error": null,
+  "timestamp": "2026-11-18T12:09:46.440174+00:00"
+}

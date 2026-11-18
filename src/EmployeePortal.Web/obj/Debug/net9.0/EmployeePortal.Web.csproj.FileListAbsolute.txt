@@ -38,3 +38,43 @@
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.pdb
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.genruntimeconfig.cache
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/ref/EmployeePortal.Web.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/appsettings.Development.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/appsettings.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/EmployeePortal.Web.staticwebassets.runtime.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/EmployeePortal.Web.staticwebassets.endpoints.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/EmployeePortal.Web
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/EmployeePortal.Web.deps.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/EmployeePortal.Web.runtimeconfig.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/EmployeePortal.Web.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/EmployeePortal.Web.pdb
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/Microsoft.Win32.SystemEvents.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/System.Drawing.Common.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/EmployeePortal.Models.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/bin/Debug/net9.0/EmployeePortal.Models.pdb
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.csproj.AssemblyReference.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/rpswa.dswa.cache.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.GeneratedMSBuildEditorConfig.editorconfig
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.AssemblyInfoInputs.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.AssemblyInfo.cs
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.csproj.CoreCompileInputs.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.MvcApplicationPartsAssemblyInfo.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.sourcelink.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/rjimswa.dswa.cache.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/scopedcss/bundle/EmployeePortal.Web.styles.css
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/compressed/3opdhfjdfd-{0}-5oxrrykc6x-5oxrrykc6x.gz
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/staticwebassets.build.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/staticwebassets.build.json.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/staticwebassets.development.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/swae.build.ex.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/Employee.EF565481.Up2Date
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/refint/EmployeePortal.Web.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.pdb
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/EmployeePortal.Web.genruntimeconfig.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Web/obj/Debug/net9.0/ref/EmployeePortal.Web.dll
