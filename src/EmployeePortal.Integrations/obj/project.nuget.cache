@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3xqR+7DexpU=",
+  "dgSpecHash": "0lKY+CeR4o4=",
   "success": true,
-  "projectFilePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+  "projectFilePath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
   "expectedPackageFiles": [
     "/Users/krunaldharamshi/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/krunaldharamshi/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
@@ -53,9 +53,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-5mfx-4wcx-rv27",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "filePath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net9.0"
@@ -65,9 +65,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "filePath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net9.0"
@@ -77,9 +77,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "filePath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net9.0"
@@ -89,9 +89,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Microsoft.Data.SqlClient' 5.1.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "filePath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "libraryId": "Microsoft.Data.SqlClient",
       "targetGraphs": [
         "net9.0"
@@ -101,9 +101,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Microsoft.IdentityModel.JsonWebTokens' 6.24.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "filePath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "libraryId": "Microsoft.IdentityModel.JsonWebTokens",
       "targetGraphs": [
         "net9.0"
@@ -113,9 +113,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Newtonsoft.Json' 12.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "filePath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net9.0"
@@ -125,9 +125,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Formats.Asn1' 5.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-447r-wph3-92pm",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "filePath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "libraryId": "System.Formats.Asn1",
       "targetGraphs": [
         "net9.0"
@@ -137,9 +137,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'System.IdentityModel.Tokens.Jwt' 6.24.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "projectPath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "projectPath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
+      "filePath": "/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Integrations/EmployeePortal.Integrations.csproj",
       "libraryId": "System.IdentityModel.Tokens.Jwt",
       "targetGraphs": [
         "net9.0"
