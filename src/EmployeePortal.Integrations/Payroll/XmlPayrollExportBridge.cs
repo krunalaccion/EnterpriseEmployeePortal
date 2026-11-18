@@ -70,8 +70,9 @@ public class XmlPayrollExportBridge : IPayrollExportBridge
         await using var connection = new SqlConnection(connectionString);
         await connection.OpenAsync(cancellationToken);
 
-        var unsafeCommandText = $"SELECT Id, DirectDepositReference, NetPay FROM PayrollRecords WHERE PaymentStatus = '{rawPeriodFilter}'";
-        await using var command = new SqlCommand(unsafeCommandText, connection);
+        var safeCommandText = "SELECT Id, DirectDepositReference, NetPay FROM PayrollRecords WHERE PaymentStatus = @PaymentStatus";
+        await using var command = new SqlCommand(safeCommandText, connection);
+        command.Parameters.AddWithValue("@PaymentStatus", rawPeriodFilter);
         await using var reader = await command.ExecuteReaderAsync(cancellationToken);
 
         while (await reader.ReadAsync(cancellationToken))

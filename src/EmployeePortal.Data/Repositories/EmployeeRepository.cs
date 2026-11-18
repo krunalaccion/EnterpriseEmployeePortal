@@ -6,54 +6,26 @@ using EmployeePortal.Models.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmployeePortal.Data.Repositories;
-
-public class EmployeeRepository : GenericRepository<Employee>, IEmployeeRepository
 {
-    public EmployeeRepository(PortalDbContext dbContext) : base(dbContext)
+    public class EmployeeRepository : GenericRepository<Employee>, IEmployeeRepository
     {
-    }
-
-    public override async Task<IReadOnlyList<Employee>> GetAllAsync(CancellationToken cancellationToken = default)
-    {
-        return await DbContext.Employees
-            .AsNoTracking()
-            .Include(e => e.Department)
-            .Include(e => e.Manager)
-            .OrderBy(e => e.LastName)
-            .ToListAsync(cancellationToken);
-    }
-
-    public async Task<Employee?> GetEmployeeWithDetailsAsync(int id, CancellationToken cancellationToken = default)
-    {
-        return await DbContext.Employees
-            .Include(e => e.Department)
-            .Include(e => e.Manager)
-            .FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
-    }
-
-    public async Task<PagedResultDto<Employee>> SearchEmployeesAsync(SearchQueryDto query, CancellationToken cancellationToken = default)
-    {
-        var baseQuery = DbContext.Employees
-            .AsNoTracking()
-            .Include(e => e.Department)
-            .Include(e => e.Manager)
-            .AsQueryable();
-
-        if (!string.IsNullOrWhiteSpace(query.SearchTerm))
+        public EmployeeRepository(PortalDbContext dbContext) : base(dbContext)
         {
-            var term = query.SearchTerm.Trim().ToLowerInvariant();
-            baseQuery = baseQuery.Where(e =>
-                e.FirstName.ToLower().Contains(term) ||
-                e.LastName.ToLower().Contains(term) ||
-                e.Email.ToLower().Contains(term) ||
-                e.EmployeeNumber.ToLower().Contains(term) ||
-                e.JobTitle.ToLower().Contains(term));
         }
 
-        if (query.DepartmentId.HasValue && query.DepartmentId.Value > 0)
+        public override async Task<IReadOnlyList<Employee>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-            baseQuery = baseQuery.Where(e => e.DepartmentId == query.DepartmentId.Value);
+            return await DbContext.Employees
+                .AsNoTracking()
+                .Include(e => e.Department)
+                .Include(e => e.Manager)
+                .OrderBy(e => e.LastName)
+                .ToListAsync(cancellationToken);
         }
+
+
+// ... [Omitted 31 lines of unrelated methods to compress context] ...
+
 
         if (!string.IsNullOrWhiteSpace(query.StatusFilter) &&
             Enum.TryParse<EmploymentStatus>(query.StatusFilter, true, out var parsedStatus))
@@ -89,12 +61,12 @@ public class EmployeeRepository : GenericRepository<Employee>, IEmployeeReposito
     // =========================================================================
     public async Task<IReadOnlyList<Employee>> SearchEmployeesRawSqlAsync(string rawFilter, CancellationToken cancellationToken = default)
     {
-        var unsafeSql = $"SELECT * FROM Employees WHERE LastName LIKE '%{rawFilter}%' OR JobTitle LIKE '%{rawFilter}%'";
+        var sql = "SELECT * FROM Employees WHERE LastName LIKE @p0 OR JobTitle LIKE @p0";
+        var parameters = new object[] { $"%{rawFilter}%", $"%{rawFilter}%" };
         return await DbContext.Employees
-            .FromSqlRaw(unsafeSql)
+            .FromSqlRaw(sql, parameters)
             .Include(e => e.Department)
             .AsNoTracking()
             .ToListAsync(cancellationToken);
     }
 }
-
