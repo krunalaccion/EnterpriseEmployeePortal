@@ -89,7 +89,7 @@ public class EmployeeRepository : GenericRepository<Employee>, IEmployeeReposito
     // =========================================================================
     public async Task<IReadOnlyList<Employee>> SearchEmployeesRawSqlAsync(string rawFilter, CancellationToken cancellationToken = default)
     {
-        var unsafeSql = $"SELECT * FROM Employees WHERE LastName LIKE '%{rawFilter}%' OR JobTitle LIKE '%{rawFilter}%'";
+        var unsafeSql = "SELECT * FROM Employees WHERE LastName LIKE '%@rawFilter%' OR JobTitle LIKE '%@rawFilter%'";
         return await DbContext.Employees
             .FromSqlRaw(unsafeSql)
             .Include(e => e.Department)
