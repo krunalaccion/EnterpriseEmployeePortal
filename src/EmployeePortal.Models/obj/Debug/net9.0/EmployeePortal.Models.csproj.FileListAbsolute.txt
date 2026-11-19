@@ -11,3 +11,16 @@
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/refint/EmployeePortal.Models.dll
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.pdb
 /Users/krunaldharamshi/Projects/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/ref/EmployeePortal.Models.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/bin/Debug/net9.0/EmployeePortal.Models.deps.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/bin/Debug/net9.0/EmployeePortal.Models.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/bin/Debug/net9.0/EmployeePortal.Models.pdb
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.csproj.AssemblyReference.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.GeneratedMSBuildEditorConfig.editorconfig
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.AssemblyInfoInputs.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.AssemblyInfo.cs
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.csproj.CoreCompileInputs.cache
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.sourcelink.json
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/refint/EmployeePortal.Models.dll
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/EmployeePortal.Models.pdb
+/Users/krunaldharamshi/Projects/Schedular test/EnterpriseEmployeePortal/src/EmployeePortal.Models/obj/Debug/net9.0/ref/EmployeePortal.Models.dll
